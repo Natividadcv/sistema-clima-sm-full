@@ -50,9 +50,9 @@
                                         <thead>
                                             <tr>
                                                 <th></th>
-                                                <th>Categoria</th>
+                                                <th>Marca</th>
                                                 <th>Nombre</th>
-                                                <th>Und</th>
+                                                <th>Cap</th>
                                                 <th>Mon.</th>
                                                 <th>P.Compra</th>
                                                 <th>P.Venta</th>

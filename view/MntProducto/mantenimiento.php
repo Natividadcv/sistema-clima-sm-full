@@ -13,7 +13,7 @@
                     <div class="row gy-2">
                         <div class="col-md-12">
                             <div>
-                                <label for="valueInput" class="form-label">Categoria</label>
+                                <label for="valueInput" class="form-label">Marca</label>
                                 <select type="text" class="form-control form-select" name="cat_id" id="cat_id" aria-label="Seleccionar">
                                     <option selected>Seleccionar</option>
 
@@ -43,7 +43,7 @@
                     <div class="row gy-2">
                         <div class="col-md-12">
                             <div>
-                                <label for="valueInput" class="form-label">UnidadDeMedida</label>
+                                <label for="valueInput" class="form-label">Capacidad aire</label>
                                 <select type="text" class="form-control form-select" name="und_id" id="und_id" aria-label="Seleccionar">
                                     <option selected>Seleccionar</option>
 

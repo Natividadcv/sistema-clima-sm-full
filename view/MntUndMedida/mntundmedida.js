@@ -21,7 +21,7 @@ function guardaryeditar(e){
             $('#modalmantenimiento').modal('hide');
 
             swal.fire({
-                title:'Unidad de Medida',
+                title:'Capacidad de aire',
                 text: 'Registro Confirmado',
                 icon: 'success'
             });
@@ -105,7 +105,7 @@ function eliminar(und_id){
             $('#table_data').DataTable().ajax.reload();
 
             swal.fire({
-                title:'Unidad de Medida',
+                title:'Capac de air',
                 text: 'Registro Eliminado',
                 icon: 'success'
             });

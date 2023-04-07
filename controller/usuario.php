@@ -77,6 +77,8 @@
                 "iTotalDisplayRecords"=>count($data),
                 "aaData"=>$data);
             echo json_encode($results);
+           
+
             break;
 
         /* TODO:Mostrar informacion de registro segun su ID */

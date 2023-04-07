@@ -5,7 +5,7 @@ class Usuario extends Conectar
   public function get_usuario_x_suc_id($suc_id)
   {
     $conectar = parent::Conexion();
-    $sql = "CALl CALL SP_L_USUARIO_01 (?)";
+    $sql = "CALL SP_L_USUARIO_01 (?)";
     $query = $conectar->prepare($sql);
     $query->bindValue(1, $suc_id);
     $query->execute();

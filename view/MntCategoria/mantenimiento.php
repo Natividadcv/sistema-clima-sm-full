@@ -13,7 +13,7 @@
                     <div class="row gy-2">
                         <div class="col-md-12">
                             <div>
-                                <label for="valueInput" class="form-label">Nombre</label>
+                                <label for="valueInput" class="form-label">Marca</label>
                                 <input type="text" class="form-control" id="cat_nom" name="cat_nom" required/>
                             </div>
                         </div>

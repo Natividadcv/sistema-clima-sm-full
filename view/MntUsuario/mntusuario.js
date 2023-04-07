@@ -1,7 +1,5 @@
 var suc_id = $("#SUC_IDx").val();
 
-
-
 function init() {
   $("#mantenimiento_form").on("submit", function (e) {
     guardaryeditar(e);

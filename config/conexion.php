@@ -13,6 +13,8 @@ class Conectar
       //$conectar = $this->dbh = new PDO("sqlsrv:Server=.\SQLEXPRESS,$puerto;Database=CompraVenta", "sa", "12345678");
       //$conectar = $this->dbh = new PDO("mysql:host=sql355.main-hosting.eu;dbname=u433272284_climacoolsm", "u433272284_clima", "Q=E#*[[3f");
       $conectar = $this->dbh = new PDO("mysql:host=localhost;port=3310;dbname=clima_cool", "root", "");
+      //$conectar->exec("set names utf8");
+
 
 
       return $conectar;
@@ -26,6 +28,6 @@ class Conectar
   public static function ruta()
   {
     /* TODO: Ruta de acceso del Proyecto (Validar su puerto y nombre de carpeta por el suyo) */
-    return "http://localhost/clima/";
+    return "http://localhost/CLIMA/";
   }
 }
