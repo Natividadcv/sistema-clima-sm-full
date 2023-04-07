@@ -5,7 +5,7 @@ class Usuario extends Conectar
   public function get_usuario_x_suc_id($suc_id)
   {
     $conectar = parent::Conexion();
-    $sql = "SP_L_USUARIO_01 ?";
+    $sql = "CALl CALL SP_L_USUARIO_01 (?)";
     $query = $conectar->prepare($sql);
     $query->bindValue(1, $suc_id);
     $query->execute();
@@ -16,7 +16,7 @@ class Usuario extends Conectar
   public function get_usuario_x_usu_id($usu_id)
   {
     $conectar = parent::Conexion();
-    $sql = "SP_L_USUARIO_02 ?";
+    $sql = "CALL SP_L_USUARIO_02 (?)";
     $query = $conectar->prepare($sql);
     $query->bindValue(1, $usu_id);
     $query->execute();
@@ -27,7 +27,7 @@ class Usuario extends Conectar
   public function delete_usuario($usu_id)
   {
     $conectar = parent::Conexion();
-    $sql = "SP_D_USUARIO_01 ?";
+    $sql = "CALL SP_D_USUARIO_01 (?)";
     $query = $conectar->prepare($sql);
     $query->bindValue(1, $usu_id);
     $query->execute();
@@ -45,7 +45,7 @@ class Usuario extends Conectar
       $usu_img = $usu->upload_image();
     }
 
-    $sql = "SP_I_USUARIO_01 ?,?,?,?,?,?,?,?,?";
+    $sql = "CALL SP_I_USUARIO_01 (?,?,?,?,?,?,?,?,?)";
     $query = $conectar->prepare($sql);
     $query->bindValue(1, $suc_id);
     $query->bindValue(2, $usu_correo);
@@ -73,7 +73,7 @@ class Usuario extends Conectar
       $usu_img = $POST["hidden_usuario_imagen"];
     }
 
-    $sql = "SP_U_USUARIO_01 ?,?,?,?,?,?,?,?,?,?";
+    $sql = "CALL SP_U_USUARIO_01 (?,?,?,?,?,?,?,?,?,?)";
     $query = $conectar->prepare($sql);
     $query->bindValue(1, $usu_id);
     $query->bindValue(2, $suc_id);
@@ -91,7 +91,7 @@ class Usuario extends Conectar
   public function update_usuario_pass($usu_id, $usu_pass)
   {
     $conectar = parent::Conexion();
-    $sql = "SP_U_USUARIO_02 ?,?";
+    $sql = "CALL SP_U_USUARIO_02 (?,?)";
     $query = $conectar->prepare($sql);
     $query->bindValue(1, $usu_id);
     $query->bindValue(2, $usu_pass);
@@ -111,7 +111,7 @@ class Usuario extends Conectar
       if (empty($sucursal) and empty($correo) and empty($pass)) {
         exit();
       } else {
-        $sql = "SP_L_USUARIO_04 ?,?,?";
+        $sql = "CALL SP_L_USUARIO_04 (?,?,?)";
         $query = $conectar->prepare($sql);
         $query->bindValue(1, $sucursal);
         $query->bindValue(2, $correo);

@@ -58,6 +58,12 @@
 
                 <li class="menu-title"><span data-key="t-menu">Mantenimiento</span></li>
 
+                <li class="nav-item">
+                                    <a class="nav-link menu-link" href="../../view/MntCalendario/">
+                                        <i class="ri-honor-of-kings-fill"></i> <span data-key="t-widgets">Agendar Cita</span>
+                                    </a>
+                </li>
+
                 <?php
                     foreach ($datos as $row) {
                        if ($row["MEN_GRUPO"]=="Mantenimiento" && $row["MEND_PERMI"]=="Si"){

@@ -26,3 +26,6 @@
 <!-- custom Css-->
 <link href="../../assets/css/custom.min.css" rel="stylesheet" type="text/css" />
 
+ <!-- fullcalendar css -->
+ <link href="../../libs/fullcalendar/main.min.css" rel="stylesheet" type="text/css" />
+
