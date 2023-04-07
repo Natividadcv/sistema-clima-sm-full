@@ -12,3 +12,4 @@ _Colocar la carpeta en la instalacion de XAMPP C:\xampp\htdocs_
 
 ```# CLIMA-COOL-SISTEMA
 # CLIMA-COOL-SISTEMA
+# LISTO
