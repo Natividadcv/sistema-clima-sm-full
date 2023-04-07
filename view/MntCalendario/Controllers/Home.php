@@ -11,21 +11,22 @@ class Home extends Controller
     public function registrar()
     {
         if (isset($_POST)) {
-            if (empty($_POST['title']) || empty($_POST['start'])) {
+            if (empty($_POST['title']) || empty($_POST['start']) || empty($_POST['end'])) {
             }else{
                 $title = $_POST['title'];
                 $start = $_POST['start'];
+                $end = $_POST['end'];
                 $color = $_POST['color'];
                 $id = $_POST['id'];
                 if ($id == '') {
-                    $data = $this->model->registrar($title, $start, $color);
+                    $data = $this->model->registrar($title, $start, $end, $color);
                     if ($data == 'ok') {
                         $msg = array('msg' => 'Evento Registrado', 'estado' => true, 'tipo' => 'success');
                     }else{
                         $msg = array('msg' => 'Error al Registrar', 'estado' => false, 'tipo' => 'danger');
                     }
                 } else {
-                    $data = $this->model->modificar($title, $start, $color, $id);
+                    $data = $this->model->modificar($title, $start, $end, $color, $id);
                     if ($data == 'ok') {
                         $msg = array('msg' => 'Evento Modificado', 'estado' => true, 'tipo' => 'success');
                     } else {
@@ -58,12 +59,13 @@ class Home extends Controller
     public function drag()
     {
         if (isset($_POST)) {
-            if (empty($_POST['id']) || empty($_POST['start'])) {
+            if (empty($_POST['id']) || empty($_POST['start']) || empty($_POST['end'])) {
                 $msg = array('msg' => 'Todo los campos son requeridos', 'estado' => false, 'tipo' => 'danger');
             } else {
                 $start = $_POST['start'];
+                $end = $_POST['end'];
                 $id = $_POST['id'];
-                $data = $this->model->dragOver($start, $id);
+                $data = $this->model->dragOver($start, $end, $id);
                 if ($data == 'ok') {
                     $msg = array('msg' => 'Evento Modificado', 'estado' => true, 'tipo' => 'success');
                 } else {
