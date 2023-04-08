@@ -22,6 +22,7 @@ class Usuario extends Conectar
     $query->execute();
     return $query->fetchAll(PDO::FETCH_ASSOC);
   }
+  
 
   /* TODO: Eliminar o cambiar estado a eliminado */
   public function delete_usuario($usu_id)
@@ -129,6 +130,8 @@ class Usuario extends Conectar
           $_SESSION["EMP_ID"] = $resultado["EMP_ID"];
           $_SESSION["ROL_ID"] = $resultado["ROL_ID"];
           $_SESSION["USU_IMG"] = $resultado["USU_IMG"];
+          $_SESSION["SUC_NOM"] = $resultado["SUC_NOM"];
+
 
           header("Location:" . Conectar::ruta() . "view/home/");
         } else {

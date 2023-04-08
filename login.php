@@ -78,7 +78,7 @@ if (isset($_POST["enviar"]) and $_POST["enviar"] == "si") {
                   <div class="p-lg-5 p-4">
                     <div>
                       <h5 class="text-primary">Bienvenido !</h5>
-                      <p class="text-muted">Acceder a AnderCode</p>
+                      <p class="text-muted">Acceder a Clima Cool</p>
                     </div>
 
                     <div class="mt-4">

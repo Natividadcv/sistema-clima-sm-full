@@ -25,9 +25,20 @@ class Conectar
     }
   }
 
-  public static function ruta()
-  {
-    /* TODO: Ruta de acceso del Proyecto (Validar su puerto y nombre de carpeta por el suyo) */
+public static function ruta()
+{
+  $host = $_SERVER['HTTP_HOST'];
+  $uri = $_SERVER['REQUEST_URI'];
+
+  /* Verificar si la ruta actual es localhost */
+  if($host == 'localhost') {
     return "http://localhost/CLIMA/";
+  } else {
+    return "http://192.168.178.218/CLIMA/";
   }
 }
+
+
+
+}
+

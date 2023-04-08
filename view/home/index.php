@@ -27,7 +27,7 @@ if (isset($_SESSION["USU_ID"])) {
     <html lang="es" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none">
 
     <head>
-      <title>AnderCode | Home</title>
+      <title>Clima Cool | Home</title>
       <?php require_once("../html/head.php"); ?>
 
       <!-- jsvectormap css -->

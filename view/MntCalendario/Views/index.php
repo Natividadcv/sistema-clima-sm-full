@@ -11,8 +11,9 @@
 <!doctype html>
 <html lang="es" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none">
 <head>
-    <title>AnderCode | Categoria</title>
-    
+    <title>Clima Cool | Categoria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo base_url; ?>Assets/css/main.min.css">
     <link rel="stylesheet" href="<?php echo base_url; ?>Assets/css/propio.css">
@@ -54,26 +55,58 @@
                                 <h1>Registrar Cita</h1>
                                  <div class="fc-toolbar">
                                 <div class="fc-right">
-                                    <button id="btnDescargarPDF" class="btn btn-primary">Descargar PDF</button>
+                                   
                                 </div>
                                 </div>
 
-                                <select id="month-selector">
-  <option value="0">Enero</option>
-  <option value="1">Febrero</option>
-  <option value="2">Marzo</option>
-  <option value="3">Abril</option>
-  <option value="4">Mayo</option>
-  <option value="5">Junio</option>
-  <option value="6">Julio</option>
-  <option value="7">Agosto</option>
-  <option value="8">Septiembre</option>
-  <option value="9">Octubre</option>
-  <option value="10">Noviembre</option>
-  <option value="11">Diciembre</option>
+                                
+<div class="d-flex justify-content-between">
+
+<div class="flex-grow-1">
+          <h4 class="fs-16 mb-1">Seleccion para filtra</h4>
+<label for="month-selector">Selecciona un mes:</label>
+<select class="month-select" id="month-selector">
+  <option value="" selected>Seleccione un mes</option>
+  <optgroup label="Primer trimestre">
+    <option value="0">Enero</option>
+    <option value="1">Febrero</option>
+    <option value="2">Marzo</option>
+  </optgroup>
+  <optgroup label="Segundo trimestre">
+    <option value="3">Abril</option>
+    <option value="4">Mayo</option>
+    <option value="5">Junio</option>
+  </optgroup>
+  <optgroup label="Tercer trimestre">
+    <option value="6">Julio</option>
+    <option value="7">Agosto</option>
+    <option value="8">Septiembre</option>
+  </optgroup>
+  <optgroup label="Cuarto trimestre">
+    <option value="9">Octubre</option>
+    <option value="10">Noviembre</option>
+    <option value="11">Diciembre</option>
+  </optgroup>
 </select>
 
-<button id="btnDescargarPDFXMes">Descargar PDF</button>
+
+<button id="btnDescargarPDF" class="btn btn-primary">
+  <i class="fas fa-file-pdf"></i> PDF completo
+</button>
+
+<button id="btnDescargarPDFXMes" class="btn btn-primary">
+  <i class="fas fa-file-pdf"></i> PDF filtrado
+</button>
+    
+</div>
+
+
+   
+</div>
+
+
+
+                       
 
 
 
