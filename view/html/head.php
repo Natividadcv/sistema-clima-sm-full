@@ -29,3 +29,8 @@
  <!-- fullcalendar css -->
  <link href="../../libs/fullcalendar/main.min.css" rel="stylesheet" type="text/css" />
 
+ <!-- propio css -->
+ <link href="../../assets/css/propio.css" rel="stylesheet" type="text/css" />
+
+
+

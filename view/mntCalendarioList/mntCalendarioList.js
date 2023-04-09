@@ -54,8 +54,39 @@ $(document).ready(function () {
           ": Activar para ordenar la columna de manera descendente",
       },
     },
+    rowCallback: function (row, data, index) {
+      console.log(data[1]);
+      if (data[1] === "1") {
+          $(row).addClass("completed");
+      }
+    },
   });
 });
 
+function marcaComoCompletada(id) {
+  try {
+    $.ajax({
+      url: "../../controller/calendario.php?op=completar",
+      type: "POST",
+      data: { id: id },
+      success: function (data) {
+        /* TODO: Mensaje de sweetalert */
+        swal.fire({
+          title: "Instalacion Completado",
+          text: "Felicitaciones, la instalacion se ha completado con exito",
+          icon: "success",
+        });
+      },
+    });
+  } catch (error) {
+    /* TODO: Manejo de errores */
+    console.error(error);
+    swal.fire({
+      title: "Error",
+      text: "Ocurrió un error al completar la instalación",
+      icon: "error",
+    });
+  }
+}
 
 init();

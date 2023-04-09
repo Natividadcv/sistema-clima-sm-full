@@ -10,11 +10,12 @@
         case "listar":
             $datos=$calendario->get_estado();
             $data=Array();
-            $correlativo = 1;
+            //$correlativo = 1;
             foreach($datos as $row){
                 $sub_array = array();
-                //$sub_array[] = $row["id"];
-                $sub_array[] = $correlativo++;
+                $sub_array[] = $row["id"];
+                $sub_array[] = $row["instalacion_completada"];
+                //$sub_array[] = $correlativo++;
                 $sub_array[] = $row["CLI_NOM"];
                 $sub_array[] = $row["PROD_NOM"];
                 $sub_array[] = $row["direccion"];
@@ -23,7 +24,9 @@
                 $sub_array[] = $row["title"];
                 $sub_array[] = $row["start"];
                 $sub_array[] = $row["end"];
+                $sub_array[] = '<button type="button" onClick="marcaComoCompletada(' . $row["id"] . ')" id="' . $row["id"] . '" class="btn btn-success btn-icon waves-effect waves-light"><i class="ri-task-line"></i></button>';
                 $data[] = $sub_array;
+                
             }
 
             $results = array(
@@ -33,5 +36,11 @@
                 "aaData"=>$data);
             echo json_encode($results);
             break;
+            case "completar":
+            if (!empty($_POST["id"])) {
+                $calendario->update_completeTask($_POST["id"]);
+            } 
+            break;
+
     }
 ?>

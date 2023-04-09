@@ -52,14 +52,16 @@
                                         <thead>
                                             <tr>
                                                 <th>ID</th>
+                                                <th>Completado</th>
                                                 <th>Cliente</th>
                                                 <th>Producto</th>
                                                 <th>Dirreccion</th>
-                                                <th>referencia</th>
+                                                <th>Punto de Referencia</th>
                                                 <th>Comentario</th>
                                                 <th>Evento</th>
                                                 <th>Fecha de inicio</th>
                                                 <th>Fecha de de fin</th>
+                                                <th>Acciones</th>
                                             </tr>
                                         </thead>
                                         <tbody>

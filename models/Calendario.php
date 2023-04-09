@@ -8,5 +8,17 @@
             $query->execute();
             return $query->fetchAll(PDO::FETCH_ASSOC);
         }
+
+
+        public function update_completeTask($id)
+        {
+        $conectar = parent::Conexion();
+        $sql = "CALL completar_instalacion (?)";
+        $query = $conectar->prepare($sql);
+        $query->bindValue(1, $id);
+        $query->execute();
+        }
+
+
     }
 ?>
