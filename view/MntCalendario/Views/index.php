@@ -168,6 +168,13 @@
                                 <label for="clientes">Seleccione un cliente</label>
                                 </div>
 
+
+                                <div class="form-floating mb-3">
+                                <select class="form-select" id="productoId" name="productoId" aria-label="Seleccione un producto"></select>
+                                <label for="productoId">Seleccione un producto</label>
+                                </div>
+
+
                                 <div class="form-floating mb-3">
                                     <input class="form-control" id="start" type="date" name="start">
                                     <label for="" class="form-label">Hora de inicio Fecha</label>
@@ -178,6 +185,21 @@
                                     <label for="" class="form-label">Hora de finalización Fecha</label>
                                 </div>
 
+
+                                    <div class="mt-4">
+                                        <label for="direccion" class="form-label text-muted text-uppercase fw-semibold">Dirección</label>
+                                        <textarea class="form-control" id="direccion" name="direccion" placeholder="Dirección" rows="4" required=""></textarea>
+                                    </div>
+
+                                    <div class="mt-4">
+                                        <label for="referencia" class="form-label text-muted text-uppercase fw-semibold">Punto de referencia</label>
+                                        <textarea class="form-control alert alert-info" id="referencia" name="referencia" placeholder="Punto de referencia" rows="4" required=""></textarea>
+                                    </div>
+
+                                    <div class="mt-4">
+                                        <label for="instalacion_coment" class="form-label text-muted text-uppercase fw-semibold">Comentario</label>
+                                        <textarea class="form-control alert alert-info" id="instalacion_coment" name="instalacion_coment" placeholder="Comentario" rows="4" required=""></textarea>
+                                    </div>
 
                
 

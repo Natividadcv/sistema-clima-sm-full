@@ -4,10 +4,10 @@ class HomeModel extends Query{
     {
         parent::__construct();
     }
-    public function registrar($title, $inicio, $end, $cliente, $color)
+    public function registrar($title, $inicio, $end, $cliente, $productoId, $direccion, $referencia, $instalacion_coment, $color)
     {
-        $sql = "INSERT INTO evento (title, start, end, idcliente, color) VALUES (?,?,?,?,?)";
-        $array = array($title, $inicio, $end, $cliente, $color);
+        $sql = "INSERT INTO evento (title, start, end, idcliente, productoId, direccion, referencia, instalacion_coment, color) VALUES (?,?,?,?,?,?,?,?,?)";
+        $array = array($title, $inicio, $end, $cliente, $productoId, $direccion, $referencia, $instalacion_coment, $color);
         $data = $this->save($sql, $array);
         if ($data == 1) {
             $res = 'ok';
@@ -37,14 +37,20 @@ class HomeModel extends Query{
         return $this->selectAll($sql);
 
     }
+        public function getProducto()
+    { 
+        $sql = "SELECT * FROM tm_producto";
+        return $this->selectAll($sql);
+
+    }
 
 
 
 
-    public function modificar($title, $inicio, $end, $cliente, $color, $id)
-    {
-        $sql = "UPDATE evento SET title=?, start=?, end=?, idcliente=?, color=? WHERE id=?";
-        $array = array($title, $inicio, $end, $cliente, $color, $id);
+    public function modificar($title, $inicio, $end, $cliente, $productoId, $direccion, $referencia, $instalacion_coment, $color, $id)
+    { 
+        $sql = "UPDATE evento SET title=?, start=?, end=?, idcliente=?, productoId=?, direccion=?, referencia=?, instalacion_coment=?, color=? WHERE id=?";
+        $array = array($title, $inicio, $end, $cliente, $productoId, $direccion, $referencia, $instalacion_coment, $color, $id);
         $data = $this->save($sql, $array);
         if ($data == 1) {
             $res = 'ok';

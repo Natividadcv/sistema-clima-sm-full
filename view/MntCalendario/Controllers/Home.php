@@ -11,23 +11,27 @@ class Home extends Controller
     public function registrar()
     {
         if (isset($_POST)) {
-            if (empty($_POST['title']) || empty($_POST['start']) || empty($_POST['end']) || empty($_POST['idcliente'])) {
+            if (empty($_POST['title']) || empty($_POST['start']) || empty($_POST['end']) || empty($_POST['idcliente']) || empty($_POST['productoId']) || empty($_POST['direccion']) || empty($_POST['referencia']) || empty($_POST['instalacion_coment']) ) {
             }else{
                 $title = $_POST['title'];
                 $start = $_POST['start'];
                 $end = $_POST['end'];
                 $cliente = $_POST['idcliente'];
+                $productoId = $_POST['productoId'];
+                $direccion = $_POST['direccion'];
+                $referencia = $_POST['referencia'];
+                $instalacion_coment = $_POST['instalacion_coment'];
                 $color = $_POST['color'];
                 $id = $_POST['id'];
                 if ($id == '') {
-                    $data = $this->model->registrar($title, $start, $end, $cliente, $color);
+                    $data = $this->model->registrar($title, $start, $end, $cliente, $productoId, $direccion, $referencia, $instalacion_coment, $color);
                     if ($data == 'ok') {
                         $msg = array('msg' => 'Evento Registrado', 'estado' => true, 'tipo' => 'success');
                     }else{
                         $msg = array('msg' => 'Error al Registrar', 'estado' => false, 'tipo' => 'danger');
                     }
                 } else {
-                    $data = $this->model->modificar($title, $start, $end, $cliente, $color, $id);
+                    $data = $this->model->modificar($title, $start, $end, $cliente, $productoId, $direccion, $referencia, $instalacion_coment, $color, $id);
                     if ($data == 'ok') {
                         $msg = array('msg' => 'Evento Modificado', 'estado' => true, 'tipo' => 'success');
                     } else {
@@ -51,6 +55,13 @@ class Home extends Controller
     public function listarCliente()
     {
         $data = $this->model->getCliente();
+        echo json_encode($data);
+        die();
+    }
+
+    public function listarProducto()
+    {
+        $data = $this->model->getProducto();
         echo json_encode($data);
         die();
     }

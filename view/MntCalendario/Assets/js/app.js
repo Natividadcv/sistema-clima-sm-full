@@ -32,6 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("start").value = info.event.startStr;
       document.getElementById("end").value = info.event.endStr;
       document.getElementById("clientes").value = info.event.extendedProps.idcliente;
+      document.getElementById("productoId").value =info.event.extendedProps.productoId;
+      document.getElementById("direccion").value = info.event.extendedProps.direccion;
+      document.getElementById("referencia").value = info.event.extendedProps.referencia;
+      document.getElementById("instalacion_coment").value = info.event.extendedProps.instalacion_coment;
       document.getElementById("color").value = info.event.backgroundColor;
       document.getElementById("btnAccion").textContent = "Modificar";
       document.getElementById("titulo").textContent = "Actualizar Evento";
@@ -43,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const start = info.event.startStr;
       const end = info.event.endStr;
       const cliente = info.event.extendedProps.clientes;
+      const productoId = info.event.extendedProps.productoId;
       const id = info.event.id;
    
       
@@ -52,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
       formDta.append("start", start);
       formDta.append("end", end);
       formDta.append("cliente", cliente);
+      formDta.append("productoId", productoId);
       formDta.append("id", id);
       http.open("POST", url, true);
       http.send(formDta);
@@ -83,6 +89,20 @@ fetch(base_url + "Home/listarCliente")
   });
 
 
+fetch(base_url + "Home/listarProducto")
+  .then((response) => response.json())
+  .then((dataProducto) => {
+    //console.log(dataProducto); // Mostrar la respuesta en la consola
+    // Recorrer el array de clientes y crear un option para cada uno
+    dataProducto.forEach((producto) => {
+      const option = document.createElement("option");
+      option.value = producto.PROD_ID;
+      option.text = producto.PROD_NOM;
+      document.getElementById("productoId").appendChild(option);
+    });
+  });
+
+
 
   calendar.render();
   frm.addEventListener("submit", function (e) {
@@ -91,7 +111,8 @@ fetch(base_url + "Home/listarCliente")
     const start = document.getElementById("start").value;
     const end = document.getElementById("end").value;
     const cliente = document.getElementById("clientes").value;
-    if (title == "" || start == "" || end == "" || cliente == "") {
+    const productoId = document.getElementById("productoId").value;
+    if (title == "" || start == "" || end == "" || cliente == "", productoId == "") {
       Swal.fire("Avisos", "Todo los campos son obligatorios", "warning");
     } else {
       const url = base_url + "Home/registrar";

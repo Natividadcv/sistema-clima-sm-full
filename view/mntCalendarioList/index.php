@@ -53,7 +53,11 @@
                                             <tr>
                                                 <th>ID</th>
                                                 <th>Cliente</th>
-                                                <th>Titulo</th>
+                                                <th>Producto</th>
+                                                <th>Dirreccion</th>
+                                                <th>referencia</th>
+                                                <th>Comentario</th>
+                                                <th>Evento</th>
                                                 <th>Fecha de inicio</th>
                                                 <th>Fecha de de fin</th>
                                             </tr>

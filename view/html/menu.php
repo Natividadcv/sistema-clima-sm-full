@@ -60,7 +60,7 @@
 
                 <li class="nav-item">
                                     <a class="nav-link menu-link" href="../../view/MntCalendario/">
-                                        <i class="ri-calendar-2-line"></i> <span data-key="t-widgets">Agendar Cita de Instalacion</span>
+                                        <i class="ri-calendar-2-line"></i> <span data-key="t-widgets">Cita de Instalación</span>
                                     </a>
                 </li>
 
