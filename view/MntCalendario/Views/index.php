@@ -36,7 +36,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Mantenimiento CA</h4>
+                                <h4 class="mb-sm-0">Mantenimiento Cita</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
@@ -52,7 +52,7 @@
                             <div class="card">
 
                                 <div class="card-header">
-                                <h1>Registrar Cita</h1>
+                                <h1>Registrar Cita de Instalación de Aire Acondicionado</h1>
                                  <div class="fc-toolbar">
                                 <div class="fc-right">
                                    
@@ -159,6 +159,14 @@
 
                             <div class="col-md-12">
 
+                           
+
+
+
+                                <div class="form-floating mb-3">
+                                <select class="form-select" id="clientes" name="idcliente" aria-label="Seleccione un cliente"></select>
+                                <label for="clientes">Seleccione un cliente</label>
+                                </div>
 
                                 <div class="form-floating mb-3">
                                     <input class="form-control" id="start" type="date" name="start">

@@ -15,6 +15,7 @@
                 $sub_array = array();
                 //$sub_array[] = $row["id"];
                 $sub_array[] = $correlativo++;
+                $sub_array[] = $row["CLI_NOM"];
                 $sub_array[] = $row["title"];
                 $sub_array[] = $row["start"];
                 $sub_array[] = $row["end"];

@@ -4,10 +4,10 @@ class HomeModel extends Query{
     {
         parent::__construct();
     }
-    public function registrar($title, $inicio, $end, $color)
+    public function registrar($title, $inicio, $end, $cliente, $color)
     {
-        $sql = "INSERT INTO evento (title, start, end, color) VALUES (?,?,?,?)";
-        $array = array($title, $inicio, $end, $color);
+        $sql = "INSERT INTO evento (title, start, end, idcliente, color) VALUES (?,?,?,?,?)";
+        $array = array($title, $inicio, $end, $cliente, $color);
         $data = $this->save($sql, $array);
         if ($data == 1) {
             $res = 'ok';
@@ -30,10 +30,21 @@ class HomeModel extends Query{
         return $this->selectAll($sql);
 
     }
-    public function modificar($title, $inicio, $end, $color, $id)
+
+        public function getCliente()
+    { 
+        $sql = "SELECT * FROM tm_cliente";
+        return $this->selectAll($sql);
+
+    }
+
+
+
+
+    public function modificar($title, $inicio, $end, $cliente, $color, $id)
     {
-        $sql = "UPDATE evento SET title=?, start=?, end=?, color=? WHERE id=?";
-        $array = array($title, $inicio, $end, $color, $id);
+        $sql = "UPDATE evento SET title=?, start=?, end=?, idcliente=?, color=? WHERE id=?";
+        $array = array($title, $inicio, $end, $cliente, $color, $id);
         $data = $this->save($sql, $array);
         if ($data == 1) {
             $res = 'ok';
@@ -54,9 +65,9 @@ class HomeModel extends Query{
         }
         return $res;
     }
-    public function dragOver($start,$end, $id)
+    public function dragOver($start,$end, $cliente, $id)
     {
-        $sql = "UPDATE evento SET start=?, end=? WHERE id=?";
+        $sql = "UPDATE evento SET start=?, end=?, idcliente=? WHERE id=?";
         $array = array($start, $end, $id);
         $data = $this->save($sql, $array);
         if ($data == 1) {

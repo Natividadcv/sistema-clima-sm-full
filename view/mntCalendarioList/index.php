@@ -29,7 +29,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Mantenimiento Cita de aire acondicionado</h4>
+                                <h4 class="mb-sm-0">Mantenimiento cita de instalación de aire acondicionado</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
@@ -52,6 +52,7 @@
                                         <thead>
                                             <tr>
                                                 <th>ID</th>
+                                                <th>Cliente</th>
                                                 <th>Titulo</th>
                                                 <th>Fecha de inicio</th>
                                                 <th>Fecha de de fin</th>
