@@ -16,7 +16,26 @@ $(document).ready(function () {
     aProcessing: true,
     aServerSide: true,
     dom: "Bfrtip",
-    buttons: ["copyHtml5", "excelHtml5", "csvHtml5"],
+    buttons: [
+      {
+        extend: "copyHtml5",
+        exportOptions: {
+          columns: [2, 3, 4, 5, 6, 7, 8, 9], // Especificar columnas a exportar
+        },
+      },
+      {
+        extend: "excelHtml5",
+        exportOptions: {
+          columns: [2, 3, 4, 5, 6, 7, 8, 9], // Especificar columnas a exportar
+        },
+      },
+      {
+        extend: "csvHtml5",
+        exportOptions: {
+          columns: [2, 3, 4, 5, 6, 7, 8, 9], // Especificar columnas a exportar
+        },
+      },
+    ],
     ajax: {
       url: "../../controller/calendario.php?op=listar",
       type: "post",
@@ -54,10 +73,16 @@ $(document).ready(function () {
           ": Activar para ordenar la columna de manera descendente",
       },
     },
+    columnDefs: [
+      {
+        targets: 1, // índice de la columna "Completado"
+        visible: false,
+      },
+    ],
     rowCallback: function (row, data, index) {
       console.log(data[1]);
       if (data[1] === "1") {
-          $(row).addClass("completed");
+        $(row).addClass("completed");
       }
     },
   });
@@ -71,6 +96,7 @@ function marcaComoCompletada(id) {
       data: { id: id },
       success: function (data) {
         /* TODO: Mensaje de sweetalert */
+        $("#table_data").DataTable().ajax.reload();
         swal.fire({
           title: "Instalacion Completado",
           text: "Felicitaciones, la instalacion se ha completado con exito",
