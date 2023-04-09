@@ -31,7 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("title").value = info.event.title;
       document.getElementById("start").value = info.event.startStr;
       document.getElementById("end").value = info.event.endStr;
-      document.getElementById("clientes").value = info.event.extendedProps.cliente;
+      document.getElementById("clientes").value =
+        info.event.extendedProps.clientes;
       document.getElementById("color").value = info.event.backgroundColor;
       document.getElementById("btnAccion").textContent = "Modificar";
       document.getElementById("titulo").textContent = "Actualizar Evento";
@@ -67,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 fetch(base_url + "Home/listarCliente")
   .then((response) => response.json())
   .then((data) => {
-    console.log(data); // Mostrar la respuesta en la consola
+    //console.log(data); // Mostrar la respuesta en la consola
     // Recorrer el array de clientes y crear un option para cada uno
     data.forEach((cliente) => {
       const option = document.createElement("option");

@@ -65,9 +65,9 @@ class HomeModel extends Query{
         }
         return $res;
     }
-    public function dragOver($start,$end, $cliente, $id)
+    public function dragOver($start,$end, $id)
     {
-        $sql = "UPDATE evento SET start=?, end=?, idcliente=? WHERE id=?";
+        $sql = "UPDATE evento SET start=?, end=? WHERE id=?";
         $array = array($start, $end, $id);
         $data = $this->save($sql, $array);
         if ($data == 1) {

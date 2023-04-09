@@ -71,14 +71,13 @@ class Home extends Controller
     public function drag()
     {
         if (isset($_POST)) {
-            if (empty($_POST['id']) || empty($_POST['start']) || empty($_POST['end']) || empty($_POST['idcliente'])) {
+            if (empty($_POST['id']) || empty($_POST['start']) || empty($_POST['end'])) {
                 $msg = array('msg' => 'Todo los campos son requeridos', 'estado' => false, 'tipo' => 'danger');
             } else {
                 $start = $_POST['start'];
                 $end = $_POST['end'];
-                $cliente = $_POST['idcliente'];
                 $id = $_POST['id'];
-                $data = $this->model->dragOver($start, $end, $cliente, $id);
+                $data = $this->model->dragOver($start, $end, $id);
                 if ($data == 'ok') {
                     $msg = array('msg' => 'Evento Modificado', 'estado' => true, 'tipo' => 'success');
                 } else {
