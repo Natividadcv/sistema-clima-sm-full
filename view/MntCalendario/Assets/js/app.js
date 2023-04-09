@@ -31,23 +31,27 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("title").value = info.event.title;
       document.getElementById("start").value = info.event.startStr;
       document.getElementById("end").value = info.event.endStr;
-      document.getElementById("clientes").value =
-        info.event.extendedProps.clientes;
+      document.getElementById("clientes").value = info.event.extendedProps.idcliente;
       document.getElementById("color").value = info.event.backgroundColor;
       document.getElementById("btnAccion").textContent = "Modificar";
       document.getElementById("titulo").textContent = "Actualizar Evento";
       eliminar.classList.remove("d-none");
+      //console.log(info.event.extendedProps.idcliente);
       myModal.show();
     },
     eventDrop: function (info) {
       const start = info.event.startStr;
       const end = info.event.endStr;
+      const cliente = info.event.extendedProps.clientes;
       const id = info.event.id;
+   
+      
       const url = base_url + "Home/drag";
       const http = new XMLHttpRequest();
       const formDta = new FormData();
       formDta.append("start", start);
       formDta.append("end", end);
+      formDta.append("cliente", cliente);
       formDta.append("id", id);
       http.open("POST", url, true);
       http.send(formDta);
@@ -245,10 +249,12 @@ function crearTablaEventos(eventos) {
   eventos.forEach((evento) => {
     const row = document.createElement("tr");
     const titleCell = document.createElement("td");
+    
     titleCell.textContent = evento.title;
     row.appendChild(titleCell);
     const startCell = document.createElement("td");
     startCell.textContent = evento.start ? evento.start.toLocaleString() : "-";
+
     row.appendChild(startCell);
     const endCell = document.createElement("td");
     endCell.textContent = evento.end ? evento.end.toLocaleString() : "-";
