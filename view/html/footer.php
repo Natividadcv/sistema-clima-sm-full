@@ -2,13 +2,14 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6">
-                <script>document.write(new Date().getFullYear())</script> © Velzon.
+                <script>document.write(new Date().getFullYear())</script> © Clima Cool.
             </div>
             <div class="col-sm-6">
                 <div class="text-sm-end d-none d-sm-block">
-                    Design & Develop by Themesbrand
+                    Design by Natividad with ❤️ 
                 </div>
             </div>
         </div>
+        
     </div>
 </footer>

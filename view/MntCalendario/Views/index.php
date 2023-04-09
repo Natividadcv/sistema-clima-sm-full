@@ -98,11 +98,13 @@
   <i class="fas fa-file-pdf"></i> PDF filtrado
 </button>
     
+</div>   
 </div>
 
 
-   
-</div>
+<div id="tablaModal"></div>
+
+
 
 
 

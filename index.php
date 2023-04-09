@@ -227,7 +227,7 @@
 
                         <div>
                             <p class="copy-rights mb-0">
-                                <script> document.write(new Date().getFullYear()) </script> © Velzon - Themesbrand
+                                <script> document.write(new Date().getFullYear()) </script> © Clima - Cool
                             </p>
                         </div>
                     </div>
