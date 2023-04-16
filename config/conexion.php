@@ -16,7 +16,6 @@ class Conectar
       //$conectar->exec("set names utf8");
 
 
-
       return $conectar;
     } catch (Exception $e) {
       /* TODO: En caso de error mostrar mensaje */
@@ -34,7 +33,9 @@ public static function ruta()
   if($host == 'localhost') {
     return "http://localhost/CLIMA/";
   } else {
-    return "http://192.168.178.218/CLIMA/";
+    $ip_address = $_SERVER['SERVER_ADDR'];
+   
+    return "http://$ip_address/CLIMA/";
   }
 }
 

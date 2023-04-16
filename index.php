@@ -43,7 +43,7 @@
                     <div class="col-lg-8">
                         <div class="text-center mb-5">
                             <h3 class="mb-3 fw-semibold">Elegir Compañia</h3>
-                            <p class="text-muted mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <p class="text-muted mb-4">Aires Clima Cool es una empresa especializada en soluciones de climatización para hogares y negocios, que ofrece productos y servicios de alta calidad y eficiencia energética.</p>
                         </div>
                     </div>
                 </div>
@@ -55,8 +55,8 @@
                             <div class="card-body p-4 m-2">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-grow-1">
-                                        <h5 class="mb-1 fw-semibold">Compañia 1</h5>
-                                        <p class="text-muted mb-0">Compañia 1</p>
+                                        <h5 class="mb-1 fw-semibold">Clima Cool</h5>
+                                        <p class="text-muted mb-0">Clima Cool</p>
                                     </div>
                                     <div class="avatar-sm">
                                         <div class="avatar-title bg-light rounded-circle text-primary">
@@ -77,7 +77,7 @@
                                                     <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
                                                 </div>
                                                 <div class="flex-grow-1">
-                                                    Caracteristica 0
+                                                    Excelencia en la calidad del trabajo
                                                 </div>
                                             </div>
                                         </li>
@@ -87,7 +87,7 @@
                                                     <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
                                                 </div>
                                                 <div class="flex-grow-1">
-                                                    Caracteristica 1
+                                                    Visión clara y enfocada en el liderazgo
                                                 </div>
                                             </div>
                                         </li>
@@ -97,7 +97,7 @@
                                                     <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
                                                 </div>
                                                 <div class="flex-grow-1">
-                                                    Caracteristica 2
+                                                    Valores sólidos
                                                 </div>
                                             </div>
                                         </li>
@@ -107,17 +107,17 @@
                                                     <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
                                                 </div>
                                                 <div class="flex-grow-1">
-                                                    Caracteristica 3
+                                                   Emprendimiento y superación
                                                 </div>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 text-success me-1">
-                                                    <i class="ri-close-circle-fill fs-15 align-middle"></i>
+                                                    <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
                                                 </div>
                                                 <div class="flex-grow-1">
-                                                    Caracteristica 4
+                                                   Fuente de empleo y crecimiento
                                                 </div>
                                             </div>
                                         </li>
@@ -231,6 +231,7 @@
                             </p>
                         </div>
                     </div>
+                    
                     <div class="col-sm-6">
                         <div class="text-sm-end mt-3 mt-sm-0">
                             <ul class="list-inline mb-0 footer-social-link">

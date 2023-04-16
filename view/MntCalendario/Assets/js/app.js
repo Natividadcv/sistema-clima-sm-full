@@ -3,6 +3,9 @@ let frm = document.getElementById("formulario");
 let eliminar = document.getElementById("btnEliminar");
 let myModal = new bootstrap.Modal(document.getElementById("myModal"));
 
+// Configuración del evento change del select
+let selectMonth = document.getElementById("select-month");
+
 document.addEventListener("DOMContentLoaded", function () {
   calendar = new FullCalendar.Calendar(calendarEl, {
     timeZone: "local",
@@ -14,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       right: "dayGridMonth timeGridWeek listWeek",
     },
     events: base_url + "Home/listar",
+
     editable: true,
     dateClick: function (info) {
       frm.reset();
@@ -29,17 +33,25 @@ document.addEventListener("DOMContentLoaded", function () {
     eventClick: function (info) {
       document.getElementById("id").value = info.event.id;
       document.getElementById("title").value = info.event.title;
+      document.getElementById("tiposervicio").value =
+        info.event.extendedProps.servicio;
       document.getElementById("start").value = info.event.startStr;
       document.getElementById("end").value = info.event.endStr;
-      document.getElementById("clientes").value = info.event.extendedProps.idcliente;
-      document.getElementById("productoId").value =info.event.extendedProps.productoId;
-      document.getElementById("direccion").value = info.event.extendedProps.direccion;
-      document.getElementById("referencia").value = info.event.extendedProps.referencia;
-      document.getElementById("instalacion_coment").value = info.event.extendedProps.instalacion_coment;
+      document.getElementById("clientes").value =
+        info.event.extendedProps.idcliente;
+      document.getElementById("productoId").value =
+        info.event.extendedProps.productoId;
+      document.getElementById("direccion").value =
+        info.event.extendedProps.direccion;
+      document.getElementById("referencia").value =
+        info.event.extendedProps.referencia;
+      document.getElementById("instalacion_coment").value =
+        info.event.extendedProps.instalacion_coment;
       document.getElementById("color").value = info.event.backgroundColor;
       document.getElementById("btnAccion").textContent = "Modificar";
       document.getElementById("titulo").textContent = "Actualizar Evento";
       eliminar.classList.remove("d-none");
+      //console.log(info.event.extendedProps.idcliente);
       //console.log(info.event.extendedProps.idcliente);
       myModal.show();
     },
@@ -49,8 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const cliente = info.event.extendedProps.clientes;
       const productoId = info.event.extendedProps.productoId;
       const id = info.event.id;
-   
-      
+
       const url = base_url + "Home/drag";
       const http = new XMLHttpRequest();
       const formDta = new FormData();
@@ -75,44 +86,56 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-fetch(base_url + "Home/listarCliente")
-  .then((response) => response.json())
-  .then((data) => {
-    //console.log(data); // Mostrar la respuesta en la consola
-    // Recorrer el array de clientes y crear un option para cada uno
-    data.forEach((cliente) => {
-      const option = document.createElement("option");
-      option.value = cliente.CLI_ID;
-      option.text = cliente.CLI_NOM;
-      document.getElementById("clientes").appendChild(option);
+  fetch(base_url + "Home/listarCliente")
+    .then((response) => response.json())
+    .then((data) => {
+      //console.log(data); // Mostrar la respuesta en la consola
+      // Recorrer el array de clientes y crear un option para cada uno
+      data.forEach((cliente) => {
+        const option = document.createElement("option");
+        option.value = cliente.CLI_ID;
+        option.text = cliente.CLI_NOM;
+        document.getElementById("clientes").appendChild(option);
+      });
     });
-  });
 
-
-fetch(base_url + "Home/listarProducto")
-  .then((response) => response.json())
-  .then((dataProducto) => {
-    //console.log(dataProducto); // Mostrar la respuesta en la consola
-    // Recorrer el array de clientes y crear un option para cada uno
-    dataProducto.forEach((producto) => {
-      const option = document.createElement("option");
-      option.value = producto.PROD_ID;
-      option.text = producto.PROD_NOM;
-      document.getElementById("productoId").appendChild(option);
+  fetch(base_url + "Home/listarProducto")
+    .then((response) => response.json())
+    .then((dataProducto) => {
+      //console.log(dataProducto); // Mostrar la respuesta en la consola
+      // Recorrer el array de clientes y crear un option para cada uno
+      dataProducto.forEach((producto) => {
+        const option = document.createElement("option");
+        option.value = producto.PROD_ID;
+        option.text = producto.PROD_NOM;
+        document.getElementById("productoId").appendChild(option);
+      });
     });
+
+  // !
+  selectMonth.addEventListener("change", function (e) {
+    e.preventDefault();
+    let month = this.value; // Obtener el mes seleccionado
+    calendar.gotoDate(new Date(calendar.getDate().getFullYear(), month)); // Cambiar el mes del FullCalendar
   });
-
-
 
   calendar.render();
   frm.addEventListener("submit", function (e) {
     e.preventDefault();
     const title = document.getElementById("title").value;
+    const servicio = document.getElementById("tiposervicio").value;
     const start = document.getElementById("start").value;
     const end = document.getElementById("end").value;
     const cliente = document.getElementById("clientes").value;
     const productoId = document.getElementById("productoId").value;
-    if (title == "" || start == "" || end == "" || cliente == "", productoId == "") {
+    if (
+      (title == "" ||
+        servicio == "" ||
+        start == "" ||
+        end == "" ||
+        cliente == "",
+      productoId == "")
+    ) {
       Swal.fire("Avisos", "Todo los campos son obligatorios", "warning");
     } else {
       const url = base_url + "Home/registrar";
@@ -163,126 +186,3 @@ fetch(base_url + "Home/listarProducto")
     });
   });
 });
-
-// Obtener una referencia al botón Descargar PDF
-const btnDescargarPDF = document.getElementById("btnDescargarPDF");
-
-// Agregar un controlador de eventos para el clic en el botón
-btnDescargarPDF.addEventListener("click", () => {
-  // Crear un nuevo objeto jsPDF
-  const pdf = new jsPDF();
-
-  // Obtener todos los eventos en el calendario
-  const eventos = calendar.getEvents();
-
-  // Crear una tabla para mostrar los eventos
-  const table = crearTablaEventos(eventos);
-
-  // Agregar la tabla al documento PDF
-  pdf.autoTable({ html: table });
-
-  // Descargar el documento PDF
-  pdf.save("calendario.pdf");
-});
-
-// Función auxiliar para crear una tabla con los eventos
-function crearTablaEventos(eventos) {
-  // Crear una tabla HTML
-  const table = document.createElement("table");
-
-  // Agregar una fila para los encabezados
-  const encabezados = ["Título", "Fecha de inicio", "Fecha de fin"];
-  const encabezadosRow = document.createElement("tr");
-  encabezados.forEach((encabezado) => {
-    const th = document.createElement("th");
-    th.textContent = encabezado;
-    encabezadosRow.appendChild(th);
-  });
-  table.appendChild(encabezadosRow);
-
-  // Agregar una fila para cada evento
-  eventos.forEach((evento) => {
-    const row = document.createElement("tr");
-    const titleCell = document.createElement("td");
-    titleCell.textContent = evento.title;
-    row.appendChild(titleCell);
-    const startCell = document.createElement("td");
-    startCell.textContent = evento.start ? evento.start.toLocaleString() : "-";
-    row.appendChild(startCell);
-    const endCell = document.createElement("td");
-    endCell.textContent = evento.end ? evento.end.toLocaleString() : "-";
-
-    row.appendChild(endCell);
-    table.appendChild(row);
-  });
-
-  return table;
-}
-
-// Obtener una referencia al botón Descargar PDF
-const btnDescargarPDFXMes = document.getElementById("btnDescargarPDFXMes");
-
-// Obtener una referencia al selector de mes
-const monthSelector = document.getElementById("month-selector");
-
-// Agregar un controlador de eventos para el clic en el botón
-btnDescargarPDFXMes.addEventListener("click", () => {
-  // Obtener el mes seleccionado
-  const selectedMonth = parseInt(monthSelector.value);
-
-  // Obtener todos los eventos en el calendario
-  const eventos = calendar.getEvents();
-
-  // Filtrar los eventos por mes
-  const eventosFiltrados = eventos.filter((evento) => {
-    return evento.start.getMonth() === selectedMonth;
-  });
-
-  // Crear una tabla para mostrar los eventos
-  const table = crearTablaEventos(eventosFiltrados);
-
-  // Crear un nuevo objeto jsPDF
-  const pdf = new jsPDF();
-
-  // Agregar la tabla al documento PDF
-  pdf.autoTable({ html: table });
-
-  // Descargar el documento PDF
-  pdf.save("calendario.pdf");
-});
-
-// Función auxiliar para crear una tabla con los eventos
-function crearTablaEventos(eventos) {
-  // Crear una tabla HTML
-  const table = document.createElement("table");
-
-  // Agregar una fila para los encabezados
-  const encabezados = ["Título", "Fecha de inicio", "Fecha de fin"];
-  const encabezadosRow = document.createElement("tr");
-  encabezados.forEach((encabezado) => {
-    const th = document.createElement("th");
-    th.textContent = encabezado;
-    encabezadosRow.appendChild(th);
-  });
-  table.appendChild(encabezadosRow);
-
-  // Agregar una fila para cada evento
-  eventos.forEach((evento) => {
-    const row = document.createElement("tr");
-    const titleCell = document.createElement("td");
-    
-    titleCell.textContent = evento.title;
-    row.appendChild(titleCell);
-    const startCell = document.createElement("td");
-    startCell.textContent = evento.start ? evento.start.toLocaleString() : "-";
-
-    row.appendChild(startCell);
-    const endCell = document.createElement("td");
-    endCell.textContent = evento.end ? evento.end.toLocaleString() : "-";
-    row.appendChild(endCell);
-    table.appendChild(row);
-  });
-
-  return table;
-}
-

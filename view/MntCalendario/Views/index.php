@@ -11,7 +11,7 @@
 <!doctype html>
 <html lang="es" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none">
 <head>
-    <title>Clima Cool | Categoria</title>
+    <title>Clima Cool | Cita</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -65,7 +65,8 @@
 <div class="flex-grow-1">
           <h4 class="fs-16 mb-1">Seleccion para filtra</h4>
 <label for="month-selector">Selecciona un mes:</label>
-<select class="month-select" id="month-selector">
+<!-- <select class="month-select" id="month-selector"> -->
+<select class="month-select" id="select-month">
   <option value="" selected>Seleccione un mes</option>
   <optgroup label="Primer trimestre">
     <option value="0">Enero</option>
@@ -89,14 +90,23 @@
   </optgroup>
 </select>
 
+<!-- <select id="select-month">
+  <option value="0">Enero</option>
+  <option value="1">Febrero</option>
+  <option value="2">Marzo</option>
+  <option value="3">Abril</option>
+  <option value="4">Mayo</option>
+  <option value="5">Junio</option>
+  <option value="6">Julio</option>
+  <option value="7">Agosto</option>
+  <option value="8">Septiembre</option>
+  <option value="9">Octubre</option>
+  <option value="10">Noviembre</option>
+  <option value="11">Diciembre</option>
+</select> -->
 
-<button id="btnDescargarPDF" class="btn btn-primary">
-  <i class="fas fa-file-pdf"></i> PDF completo
-</button>
+<div id="calendar"></div>
 
-<button id="btnDescargarPDFXMes" class="btn btn-primary">
-  <i class="fas fa-file-pdf"></i> PDF filtrado
-</button>
     
 </div>   
 </div>
@@ -153,6 +163,15 @@
                                     <input type="hidden" id="id" name="id">
                                     <input id="title" type="text" class="form-control" name="title">
                                     <label for="title">Evento</label>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                  <select class="form-select" id="tiposervicio" name="tiposervicio"  aria-label="Seleccione un cliente"> 
+                                            <option value="Instalacion de aire">Instalación de aire</option>
+                                            <option value="Manteminieto de aire">Mantenimiento de aire</option>
+                                        </select>
+                                                                           <label for="clientes">Seleccione un servicio</label>     
+
                                 </div>
 
                             </div>

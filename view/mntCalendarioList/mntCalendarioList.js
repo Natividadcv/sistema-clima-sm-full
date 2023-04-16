@@ -90,20 +90,34 @@ $(document).ready(function () {
 
 function marcaComoCompletada(id) {
   try {
-    $.ajax({
-      url: "../../controller/calendario.php?op=completar",
-      type: "POST",
-      data: { id: id },
-      success: function (data) {
-        /* TODO: Mensaje de sweetalert */
-        $("#table_data").DataTable().ajax.reload();
-        swal.fire({
-          title: "Instalacion Completado",
-          text: "Felicitaciones, la instalacion se ha completado con exito",
-          icon: "success",
-        });
-      },
-    });
+    swal.fire({
+      title: "¿Está seguro de completar la instalación?",
+      text: "Una vez completada no podrá revertir los cambios",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, completar",
+      cancelButtonText: "Cancelar",
+    })
+    .then((result) => {
+      if (result.isConfirmed) {
+           $.ajax({
+             url: "../../controller/calendario.php?op=completar",
+             type: "POST",
+             data: { id: id },
+             success: function (data) {
+               /* TODO: Mensaje de sweetalert */
+               $("#table_data").DataTable().ajax.reload();
+               swal.fire({
+                 title: "Instalacion Completado",
+                 text: "Felicitaciones, la instalacion se ha completado con exito",
+                 icon: "success",
+               });
+             },
+           });
+      }
+    })
   } catch (error) {
     /* TODO: Manejo de errores */
     console.error(error);
