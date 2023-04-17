@@ -57,7 +57,7 @@
                                                 <th>P.Compra</th>
                                                 <th>P.Venta</th>
                                                 <th>Stock</th>
-                                                <th>FechaCreacion</th>
+                                                <th>Fecha Creacion</th>
                                                 <th></th>
                                                 <th></th>
                                                 <th></th>

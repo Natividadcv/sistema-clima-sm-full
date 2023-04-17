@@ -33,7 +33,7 @@
               <td class="text-end" id="txtsubtotal">0</td>
             </tr>
             <tr>
-              <td>IGV (13%)</td>
+              <td>IVA (13%)</td>
               <td class="text-end" id="txtigv">0</td>
             </tr>
             <tr class="border-top border-top-dashed fs-15">

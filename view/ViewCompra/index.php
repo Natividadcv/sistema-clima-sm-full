@@ -57,7 +57,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="flex-shrink-0 mt-sm-0 mt-3">
-                                                    <h6><span class="text-muted fw-normal">RUC: </span><span id="txtruc"></span></h6>
+                                                    <h6><span class="text-muted fw-normal">NIT: </span><span id="txtruc"></span></h6>
                                                     <h6><span class="text-muted fw-normal">Email: </span><span id="txtemail"></span></h6>
                                                     <h6><span class="text-muted fw-normal">Pagina Web: </span> <a href="https://themesbrand.com/" class="link-primary" target="_blank" id="txtweb"></a></h6>
                                                     <h6 class="mb-0"><span class="text-muted fw-normal">Telefono: </span><span id="txttelf"></span></h6>
@@ -163,7 +163,7 @@
                                                             <td class="text-end" id="compr_subtotal"></td>
                                                         </tr>
                                                         <tr>
-                                                            <td>IGV (13%)</td>
+                                                            <td>IVA (13%)</td>
                                                             <td class="text-end" id="compr_igv"></td>
                                                         </tr>
                                                         <tr class="border-top border-top-dashed fs-15">

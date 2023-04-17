@@ -17,6 +17,7 @@
                 $sub_array[] = $row["instalacion_completada"];
                 //$sub_array[] = $correlativo++;
                 $sub_array[] = $row["CLI_NOM"];
+                $sub_array[] = $row["servicio"];
                 $sub_array[] = $row["PROD_NOM"];
                 $sub_array[] = $row["direccion"];
                 $sub_array[] = $row["referencia"];

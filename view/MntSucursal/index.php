@@ -50,7 +50,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Nombre</th>
-                                                <th>FechaCreacion</th>
+                                                <th>Fecha Creacion</th>
                                                 <th></th>
                                                 <th></th>
                                             </tr>

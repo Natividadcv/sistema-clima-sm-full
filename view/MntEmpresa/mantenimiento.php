@@ -13,7 +13,7 @@
                     <div class="row gy-2">
                         <div class="col-md-12">
                             <div>
-                                <label for="valueInput" class="form-label">RUC</label>
+                                <label for="valueInput" class="form-label">NIT</label>
                                 <input type="text" class="form-control" id="emp_ruc" name="emp_ruc" required/>
                             </div>
                         </div>

@@ -56,7 +56,7 @@
                                                 <th>Telefono</th>
                                                 <th>Contraseña</th>
                                                 <th>Rol</th>
-                                                <th>FechaCreacion</th>
+                                                <th>Fecha Creacion</th>
                                                 <th></th>
                                                 <th></th>
                                             </tr>

@@ -50,10 +50,10 @@
                                         <thead>
                                             <tr>
                                                 <th>Nombre</th>
-                                                <th>RUC</th>
+                                                <th>NIT</th>
                                                 <th>Telefono</th>
                                                 <th>Email</th>
-                                                <th>FechaCreacion</th>
+                                                <th>Fecha Creacion</th>
                                                 <th></th>
                                                 <th></th>
                                             </tr>

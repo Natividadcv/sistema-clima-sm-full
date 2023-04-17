@@ -166,11 +166,11 @@
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                  <select class="form-select" id="tiposervicio" name="tiposervicio"  aria-label="Seleccione un cliente"> 
+                                  <select class="form-select" id="tiposervicio" name="tiposervicio"  aria-label="Seleccione un servicio"> 
                                             <option value="Instalacion de aire">Instalación de aire</option>
                                             <option value="Manteminieto de aire">Mantenimiento de aire</option>
                                         </select>
-                                                                           <label for="clientes">Seleccione un servicio</label>     
+                                                                           <label for="tiposervicio">Seleccione un servicio</label>     
 
                                 </div>
 

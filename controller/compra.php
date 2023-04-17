@@ -19,7 +19,7 @@
         case "guardardetalle":
             $datos=$compra->insert_compra_detalle($_POST["compr_id"],$_POST["prod_id"],$_POST["prod_pcompra"],$_POST["detc_cant"]);
             break;
-        /* TODO: Calculo de SUBTOTAL,IGV,TOTAL */
+        /* TODO: Calculo de SUBTOTAL,IVA,TOTAL */
         case "calculo":
             $datos=$compra->get_compra_calculo($_POST["compr_id"]);
             foreach($datos as $row){

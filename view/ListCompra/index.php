@@ -51,12 +51,12 @@
                                             <tr>
                                                 <th>Nro</th>
                                                 <th>Doc.</th>
-                                                <th>RUC</th>
+                                                <th>NIT</th>
                                                 <th>Proveedor</th>
                                                 <th>Pago</th>
                                                 <th>Moneda</th>
                                                 <th>SubTotal</th>
-                                                <th>IGV</th>
+                                                <th>IVA</th>
                                                 <th>Total</th>
                                                 <th>Usuario</th>
                                                 <th></th>

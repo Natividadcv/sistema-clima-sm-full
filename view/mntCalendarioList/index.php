@@ -54,6 +54,7 @@
                                                 <th>ID</th>
                                                 <th>Completado</th>
                                                 <th>Cliente</th>
+                                                <th>Servicio</th>
                                                 <th>Producto</th>
                                                 <th>Dirreccion</th>
                                                 <th>Punto de Referencia</th>

@@ -107,7 +107,7 @@
                                                 </select>
                                             </div>
                                             <div class="col-lg-4">
-                                                <label for="prov_ruc" class="form-label">RUC</label>
+                                                <label for="prov_ruc" class="form-label">NIT</label>
                                                 <input type="text" class="form-control" id="cli_ruc" name="cli_ruc" placeholder="RUC" readonly/>
                                             </div>
                                             <div class="col-lg-4">
@@ -225,7 +225,7 @@
                                                 <td class="text-end" id="txtsubtotal">0</td>
                                             </tr>
                                             <tr>
-                                                <td>IGV (13%)</td>
+                                                <td>IVA (13%)</td>
                                                 <td class="text-end" id="txtigv">0</td>
                                             </tr>
                                             <tr class="border-top border-top-dashed fs-15">
