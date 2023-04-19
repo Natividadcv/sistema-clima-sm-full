@@ -62,7 +62,8 @@
                                                 <th>Evento</th>
                                                 <th>Fecha de inicio</th>
                                                 <th>Fecha de de fin</th>
-                                                <th>Acciones</th>
+                                                <th></th>
+                                                <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>

@@ -26,6 +26,7 @@
                 $sub_array[] = $row["start"];
                 $sub_array[] = $row["end"];
                 $sub_array[] = '<button type="button" onClick="marcaComoCompletada(' . $row["id"] . ')" id="' . $row["id"] . '" class="btn btn-success btn-icon waves-effect waves-light"><i class="ri-task-line"></i></button>';
+                $sub_array[] = '<button type="button" onClick="undoTaskCompletion(' . $row["id"] . ')" id="' . $row["id"] . '" class="btn btn-danger btn-icon waves-effect waves-light"><i class="ri-arrow-go-back-line"></i></button>';
                 $data[] = $sub_array;
                 
             }
@@ -40,6 +41,11 @@
             case "completar":
             if (!empty($_POST["id"])) {
                 $calendario->update_completeTask($_POST["id"]);
+            } 
+            break;
+        case "deshacer_completado":
+            if (!empty($_POST["id"])) {
+                $calendario->update_undoTaskCompletion($_POST["id"]);
             } 
             break;
 

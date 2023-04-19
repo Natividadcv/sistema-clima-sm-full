@@ -19,6 +19,15 @@
         $query->execute();
         }
 
+        public function update_undoTaskCompletion($id)
+        {
+        $conectar = parent::Conexion();
+        $sql = "CALL deshacer_completado (?)";
+        $query = $conectar->prepare($sql);
+        $query->bindValue(1, $id);
+        $query->execute();
+        }
+
 
     }
 ?>

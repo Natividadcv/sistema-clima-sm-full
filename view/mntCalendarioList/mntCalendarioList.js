@@ -90,40 +90,95 @@ $(document).ready(function () {
 
 function marcaComoCompletada(id) {
   try {
-    swal.fire({
-      title: "¿Está seguro de completar la instalación?",
-      text: "Una vez completada no podrá revertir los cambios",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Si, completar",
-      cancelButtonText: "Cancelar",
-    })
-    .then((result) => {
-      if (result.isConfirmed) {
-           $.ajax({
-             url: "../../controller/calendario.php?op=completar",
-             type: "POST",
-             data: { id: id },
-             success: function (data) {
-               /* TODO: Mensaje de sweetalert */
-               $("#table_data").DataTable().ajax.reload();
-               swal.fire({
-                 title: "Instalacion Completado",
-                 text: "Felicitaciones, la instalacion se ha completado con exito",
-                 icon: "success",
-               });
-             },
-           });
-      }
-    })
+    swal
+      .fire({
+        title: "¿Está seguro de completar la instalación?",
+        text: "Una vez completada no podrá revertir los cambios",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Si, completar",
+        cancelButtonText: "Cancelar",
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+          $.ajax({
+            url: "../../controller/calendario.php?op=completar",
+            type: "POST",
+            data: { id: id },
+            success: function (data) {
+              /* TODO: Mensaje de sweetalert */
+              $("#table_data").DataTable().ajax.reload();
+              swal.fire({
+                title: "Instalacion Completado",
+                text: "Felicitaciones, la instalacion se ha completado con exito",
+                icon: "success",
+              });
+            },
+          });
+        }
+      });
   } catch (error) {
     /* TODO: Manejo de errores */
     console.error(error);
     swal.fire({
       title: "Error",
       text: "Ocurrió un error al completar la instalación",
+      icon: "error",
+    });
+  }
+}
+function undoTaskCompletion(id) {
+  try {
+    swal
+      .fire({
+        title:
+          "¿Está seguro de deshacer la instalación completada o mantenimiento?",
+        text: "Esta acción revertirá la instalación completada de un aire acondicionado o mantenimiento de aire acondicionado.",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Sí, deshacer",
+        cancelButtonText: "Cancelar",
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+          $.ajax({
+            url: "../../controller/calendario.php?op=deshacer_completado",
+            type: "POST",
+            data: { id: id },
+            success: function (data) {
+              $("#table_data").DataTable().ajax.reload();
+              swal.fire({
+                title: "Deshacer instalación completada",
+                text: "La instalación completada se ha revertido con éxito",
+                icon: "success",
+              });
+            },
+            error: function (error) {
+              swal.fire({
+                title: "Error al deshacer instalación completada",
+                text: "Ocurrió un error al deshacer la instalación completada de un aire acondicionado o mantenimiento de aire acondicionado",
+                icon: "error",
+              });
+            },
+          });
+        } else {
+          swal.fire({
+            title: "Cancelado",
+            text: "La acción ha sido cancelada",
+            icon: "info",
+          });
+        }
+      });
+  } catch (error) {
+    /* TODO: Manejo de errores */
+    console.error(error);
+    swal.fire({
+      title: "Error",
+      text: "Ocurrió un error al deshacer la instalación completada de un aire acondicionado o mantenimiento de aire acondicionado",
       icon: "error",
     });
   }
