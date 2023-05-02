@@ -22,8 +22,16 @@ class Home extends Controller
                 $direccion = $_POST['direccion'];
                 $referencia = $_POST['referencia'];
                 $instalacion_coment = $_POST['instalacion_coment'];
-                $color = $_POST['color'];
+                $color = "";
                 $id = $_POST['id'];
+
+                if($servicio == "Instalacion de aire"){
+                    $color = "#1976d2";
+                }else{
+                    $color = "#ffc107";
+                }
+
+
                 if ($id == '') {
                     $data = $this->model->registrar($title, $servicio, $start, $end, $cliente, $productoId, $direccion, $referencia, $instalacion_coment, $color);
                     if ($data == 'ok') {

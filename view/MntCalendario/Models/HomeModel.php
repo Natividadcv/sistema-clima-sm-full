@@ -26,7 +26,7 @@ class HomeModel extends Query{
         //     // Fetch events from database 
         //     $sql = "SELECT * FROM evento $where_sql"; 
 
-        $sql = "SELECT * FROM evento";
+        $sql = "SELECT * FROM evento WHERE instalacion_completada = 0";
         return $this->selectAll($sql);
 
     }

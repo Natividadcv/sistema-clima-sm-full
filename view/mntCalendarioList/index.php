@@ -13,6 +13,7 @@
 <head>
     <title>Clima Cool | Citas de Instalacion</title>
     <?php require_once("../html/head.php"); ?>
+    <link rel="stylesheet" href="css.css">
 </head>
 
 <body>
@@ -61,7 +62,7 @@
                                                 <th>Comentario</th>
                                                 <th>Evento</th>
                                                 <th>Fecha de inicio</th>
-                                                <th>Fecha de de fin</th>
+                                                <th>Fecha de mantenimiento</th>
                                                 <th></th>
                                                 <th></th>
                                             </tr>
@@ -77,6 +78,14 @@
                     </div>
                 </div>
             </div>
+
+            <div id="custom-alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Alerta!</strong> El mantenimiento para el cliente <span id="alert-id"></span> se aproxima en menos de 7 días.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+
+
 
             <?php require_once("../html/footer.php"); ?>
         </div>

@@ -1,4 +1,8 @@
 var suc_id = $("#SUC_IDx").val();
+var alertCounter = 0;
+
+
+
 //console.log(suc_id);
 function init() {
   $("#mantenimiento_form").on("submit", function (e) {
@@ -79,11 +83,24 @@ $(document).ready(function () {
         visible: false,
       },
     ],
+    
     rowCallback: function (row, data, index) {
-      console.log(data[1]);
-      if (data[1] === "1") {
+    console.log(data[1]);
+    if (data[1] === "1") {
         $(row).addClass("completed");
-      }
+    }
+    if(data[11] === "Alerta"){
+        $('#custom-alert').hide();
+        var cliente = data[2];
+        var alertDiv = $('#custom-alert').clone();
+        var alertID = 'custom-alert-' + alertCounter;
+        alertDiv.attr('id', alertID);
+        alertDiv.find('#alert-id').text(cliente);
+        alertDiv.appendTo('body').fadeIn(300).delay(5000).fadeOut(10000, function(){
+            $(this).remove(); // eliminar la alerta del DOM después de ocultarla
+        });
+        alertCounter++;
+    }
     },
   });
 });

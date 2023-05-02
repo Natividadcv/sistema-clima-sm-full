@@ -31,23 +31,17 @@ document.addEventListener("DOMContentLoaded", function () {
     },
 
     eventClick: function (info) {
+        console.log(document.getElementById("start").value = info.event);
       document.getElementById("id").value = info.event.id;
       document.getElementById("title").value = info.event.title;
-      document.getElementById("tiposervicio").value =
-        info.event.extendedProps.servicio;
+      document.getElementById("tiposervicio").value = info.event.extendedProps.servicio;
       document.getElementById("start").value = info.event.startStr;
-      document.getElementById("end").value = info.event.endStr;
-      document.getElementById("clientes").value =
-        info.event.extendedProps.idcliente;
-      document.getElementById("productoId").value =
-        info.event.extendedProps.productoId;
-      document.getElementById("direccion").value =
-        info.event.extendedProps.direccion;
-      document.getElementById("referencia").value =
-        info.event.extendedProps.referencia;
-      document.getElementById("instalacion_coment").value =
-        info.event.extendedProps.instalacion_coment;
-      document.getElementById("color").value = info.event.backgroundColor;
+      document.getElementById("end").value = info.event.endStr || info.event.startStr;
+      document.getElementById("clientes").value = info.event.extendedProps.idcliente;
+      document.getElementById("productoId").value =info.event.extendedProps.productoId;
+      document.getElementById("direccion").value = info.event.extendedProps.direccion;
+      document.getElementById("referencia").value = info.event.extendedProps.referencia;
+      document.getElementById("instalacion_coment").value = info.event.extendedProps.instalacion_coment;
       document.getElementById("btnAccion").textContent = "Modificar";
       document.getElementById("titulo").textContent = "Actualizar Evento";
       eliminar.classList.remove("d-none");
@@ -57,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     eventDrop: function (info) {
       const start = info.event.startStr;
-      const end = info.event.endStr;
+      const end = info.event.endStr || info.event.startStr;
       const cliente = info.event.extendedProps.clientes;
       const productoId = info.event.extendedProps.productoId;
       const id = info.event.id;
