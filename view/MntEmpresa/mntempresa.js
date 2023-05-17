@@ -1,3 +1,4 @@
+
 var com_id = $('#COM_IDx').val();
 
 function init(){
@@ -122,5 +123,15 @@ $(document).on("click","#btnnuevo",function(){
     $("#mantenimiento_form")[0].reset();
     $('#modalmantenimiento').modal('show');
 });
+
+const empresaNit = document.getElementById("emp_ruc");
+
+empresaNit.addEventListener("keypress", function (event) {
+  if (isNaN(event.key)) {
+    event.preventDefault();
+  }
+});
+
+
 
 init();

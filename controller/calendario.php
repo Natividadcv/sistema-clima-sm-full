@@ -33,6 +33,13 @@
                 $diferencia = $fechaActual->diff($fechaProx);
                 $dias = $diferencia->days;
             
+                /* Este bloque de código verifica si la diferencia entre la fecha actual y la fecha de
+                la tarea es menor o igual a 7 días. Si es así, crea una insignia con un mensaje de
+                advertencia que indica que la tarea necesita mantenimiento en los próximos días. Si
+                no, simplemente muestra la fecha del próximo mantenimiento. La credencial se agrega
+                al `` junto con el estado "Alerta" (que significa "Alerta" en español)
+                para que se muestre en el DataTable. */
+                
                 if ($dias <= 7) {
                     $sub_array[] = '<div class="badge badge-danger py-2 px-3 text-lg bg-danger shadow-sm rounded-lg d-flex align-items-center">
                     <i class="bi bi-calendar-date-fill me-2"></i>
@@ -45,7 +52,9 @@
                 }
             
                 $sub_array[] = '<button type="button" onClick="marcaComoCompletada(' . $row["id"] . ')" id="' . $row["id"] . '" class="btn btn-success btn-icon waves-effect waves-light"><i class="ri-task-line"></i></button>';
+
                 $sub_array[] = '<button type="button" onClick="undoTaskCompletion(' . $row["id"] . ')" id="' . $row["id"] . '" class="btn btn-danger btn-icon waves-effect waves-light"><i class="ri-arrow-go-back-line"></i></button>';
+                
                 $data[] = $sub_array;
             }
             

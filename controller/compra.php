@@ -1,9 +1,19 @@
+
 <?php
     /* TODO: Llamando Clases */
     require_once("../config/conexion.php");
     require_once("../models/Compra.php");
     /* TODO: Inicializando clase */
     $compra = new Compra();
+
+    /* El código anterior es un script PHP que maneja varias operaciones relacionadas con las compras, como
+    registrar una compra, insertar detalles de compra, calcular el subtotal, eliminar un detalle de
+    compra, enumerar detalles de compra, actualizar una compra, mostrar datos de compra por ID, enumerar
+    todas las compras por una sucursal específica, mostrando los 5 principales productos comprados,
+    mostrando las 5 compras recientes principales, mostrando las actividades de compra recientes para el
+    tablero y mostrando el consumo de compras por categoría para el tablero. El script usa una clase
+    Compra e interactúa con una base de datos para realizar estas operaciones. */
+
 
     switch($_GET["op"]){
 
@@ -60,7 +70,11 @@
                 $sub_array[] = $row["PROD_PCOMPRA"];
                 $sub_array[] = $row["DETC_CANT"];
                 $sub_array[] = $row["DETC_TOTAL"];
+
                 $sub_array[] = '<button type="button" onClick="eliminar('.$row["DETC_ID"].','.$row["COMPR_ID"].')" id="'.$row["DETC_ID"].'" class="btn btn-danger btn-icon waves-effect waves-light"><i class="ri-delete-bin-5-line"></i></button>';
+
+
+
                 $data[] = $sub_array;
             }
 
@@ -193,6 +207,7 @@
                     "</div>";
                 }
                 $sub_array[] = '<a href="../ViewCompra/?c='.$row["COMPR_ID"].'" target="_blank" class="btn btn-primary btn-icon waves-effect waves-light"><i class="ri-printer-line"></i></a>';
+
                 $sub_array[] = '<button type="button" onClick="ver('.$row["COMPR_ID"].')" id="'.$row["COMPR_ID"].'" class="btn btn-success btn-icon waves-effect waves-light"><i class="ri-settings-2-line"></i></button>';
                 $data[] = $sub_array;
             }

@@ -1,4 +1,16 @@
-<?php
+
+
+<?php 
+
+/* Este es un script PHP que maneja diferentes operaciones relacionadas con un modelo de categoría.
+Incluye funciones para insertar, actualizar, eliminar y recuperar categorías de una base de datos,
+así como funciones para dar formato a los datos para mostrarlos en un tablero y un cuadro combinado.
+El script usa una declaración de cambio para determinar qué operación realizar según el valor del
+parámetro "op" (opcion) pasado en la URL. También incluye llamadas a otros archivos y clases de PHP para la
+conectividad de la base de datos y la funcionalidad del modelo. */
+
+
+
 /* TODO: Llamando Clases */
 require_once("../config/conexion.php");
 require_once("../models/Categoria.php");
@@ -33,7 +45,8 @@ switch ($_GET["op"]) {
       "iTotalRecords" => count($data),
       "iTotalDisplayRecords" => count($data),
       "aaData" => $data
-    );
+    ); // Obtener datos para mostrar en datatable
+
     echo json_encode($results);
     break;
 

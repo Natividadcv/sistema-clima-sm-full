@@ -14,7 +14,7 @@
                         <div class="col-md-12">
                             <div>
                                 <label for="valueInput" class="form-label">NIT</label>
-                                <input type="text" class="form-control" id="emp_ruc" name="emp_ruc" required/>
+                                <input type="text" class="form-control" id="emp_ruc" name="emp_ruc" maxlength="14" required/>
                             </div>
                         </div>
                     </div>

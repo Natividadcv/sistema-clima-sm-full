@@ -23,7 +23,7 @@
                         <div class="col-md-12">
                             <div>
                                 <label for="valueInput" class="form-label">NIT</label>
-                                <input type="text" class="form-control" id="prov_ruc" name="prov_ruc" required/>
+                                <input type="text" class="form-control" id="prov_ruc" name="prov_ruc"  maxlength="14" required/>
                             </div>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                         <div class="col-md-12">
                             <div>
                                 <label for="valueInput" class="form-label">Telefono</label>
-                                <input type="text" class="form-control" id="prov_telf" name="prov_telf" required/>
+                                <input type="text" class="form-control" id="prov_telf" name="prov_telf"  maxlength="8" required/>
                             </div>
                         </div>
                     </div>

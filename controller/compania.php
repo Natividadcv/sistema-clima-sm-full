@@ -5,6 +5,12 @@
     /* TODO: Inicializando clase */
     $compania = new Compania();
 
+      /* Este es un script PHP que maneja diferentes operaciones relacionadas con la entidad de una empresa.
+    Incluye funciones para insertar, actualizar, eliminar y recuperar datos de una tabla de base de
+    datos. También incluye una declaración de cambio que determina qué operación realizar en función del
+    valor del parámetro "op" pasado a través de la URL. El script genera datos JSON para la operación
+    "listar" y la operación "mostrar". */
+
     switch($_GET["op"]){
         /* TODO: Guardar y editar, guardar cuando el ID este vacio, y Actualizar cuando se envie el ID */
         case "guardaryeditar":

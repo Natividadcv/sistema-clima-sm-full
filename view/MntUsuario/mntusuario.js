@@ -171,4 +171,18 @@ $(document).on("click", "#btnremovephoto", function () {
   );
 });
 
+const nit = document.getElementById("usu_dni");
+const telefono = document.getElementById("usu_telf");
+ 
+nit.addEventListener("keypress", function (event) {
+  if (isNaN(event.key)) {
+    event.preventDefault();
+  }
+});
+telefono.addEventListener("keypress", function (event) {
+  if (isNaN(event.key)) {
+    event.preventDefault();
+  }
+});
+
 init();

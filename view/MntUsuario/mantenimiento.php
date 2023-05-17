@@ -40,8 +40,8 @@
                     <div class="row gy-2">
                         <div class="col-md-12">
                             <div>
-                                <label for="valueInput" class="form-label">DNI</label>
-                                <input type="text" class="form-control" id="usu_dni" name="usu_dni" required/>
+                                <label for="valueInput" class="form-label">NIT</label>
+                                <input type="text" class="form-control" id="usu_dni" name="usu_dni" maxlength="14" required/>
                             </div>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
                         <div class="col-md-12">
                             <div>
                                 <label for="valueInput" class="form-label">Telefono</label>
-                                <input type="text" class="form-control" id="usu_telf" name="usu_telf" required/>
+                                <input type="text" class="form-control" id="usu_telf" name="usu_telf" maxlength="8" required/>
                             </div>
                         </div>
                     </div>

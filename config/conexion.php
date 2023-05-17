@@ -10,8 +10,9 @@ class Conectar
     try {
       
       /* TODO: Cadena de Conexion */
-      //$conectar = $this->dbh = new PDO("sqlsrv:Server=.\SQLEXPRESS,$puerto;Database=CompraVenta", "sa", "12345678");
-      //$conectar = $this->dbh = new PDO("mysql:host=sql355.main-hosting.eu;dbname=u433272284_climacoolsm", "u433272284_clima", "Q=E#*[[3f");
+  
+      /* Este código está creando un nuevo objeto PDO para establecer una conexión a una base de datos
+      MySQL con los siguientes parámetros: */
       $conectar = $this->dbh = new PDO("mysql:host=localhost;port=3310;dbname=clima_cool", "root", "");
       //$conectar->exec("set names utf8");
 

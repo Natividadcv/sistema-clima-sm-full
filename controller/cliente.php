@@ -5,6 +5,12 @@
     /* TODO: Inicializando clase */
     $cliente = new Cliente();
 
+        /* Este código usa una declaración de cambio para manejar diferentes operaciones basadas en el valor
+        del parámetro "op" en la matriz . En este caso específico, verifica si el valor "op" es
+        "guardaryeditar" y luego inserta un nuevo registro o actualiza un registro existente en la base de
+        datos en función de si el parámetro "cli_id" está vacío o no. Si está vacío, se inserta un nuevo
+        registro, de lo contrario, se actualiza un registro existente. */
+        
     switch($_GET["op"]){
         /* TODO: Guardar y editar, guardar cuando el ID este vacio, y Actualizar cuando se envie el ID */
         case "guardaryeditar":

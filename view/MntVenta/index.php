@@ -269,4 +269,3 @@
     }else{
         header("Location:".Conectar::ruta()."view/404/");
     }
-?>

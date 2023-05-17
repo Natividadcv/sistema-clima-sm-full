@@ -1,3 +1,19 @@
+const telInput = document.getElementById("cli_telf");
+const nit = document.getElementById("cli_ruc");
+
+telInput.addEventListener("keypress", function (event) {
+  if (isNaN(event.key)) {
+    event.preventDefault();
+  }
+});
+
+nit.addEventListener("keypress", function (event) {
+  if (isNaN(event.key)) {
+    event.preventDefault();
+  }
+});
+
+
 var emp_id = $('#EMP_IDx').val();
 
 function init(){

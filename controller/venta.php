@@ -192,8 +192,16 @@ switch ($_GET["op"]) {
           "</div>" .
           "</div>";
       }
+      
       $sub_array[] = '<a href="../ViewVenta/?v=' . $row["VENT_ID"] . '" target="_blank" class="btn btn-primary btn-icon waves-effect waves-light"><i class="ri-printer-line"></i></a>';
+
+      $sub_array[] = '<a href="../ViewTicket/?v=' . $row["VENT_ID"] . '" target="_blank" class="btn btn-primary btn-icon waves-effect waves-light"><i class="ri-coupon-3-line"></i></a>';
+      
       $sub_array[] = '<button type="button" onClick="ver(' . $row["VENT_ID"] . ')" id="' . $row["VENT_ID"] . '" class="btn btn-success btn-icon waves-effect waves-light"><i class="ri-settings-2-line"></i></button>';
+
+
+
+
       $data[] = $sub_array;
     }
 

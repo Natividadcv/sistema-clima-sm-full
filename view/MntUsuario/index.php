@@ -52,7 +52,7 @@
                                                 <th>Correo</th>
                                                 <th>Nombre</th>
                                                 <th>Apellido</th>
-                                                <th>DNI</th>
+                                                <th>NIT</th>
                                                 <th>Telefono</th>
                                                 <th>Contraseña</th>
                                                 <th>Rol</th>
