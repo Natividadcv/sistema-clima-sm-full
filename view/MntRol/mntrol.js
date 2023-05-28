@@ -1,3 +1,8 @@
+/**
+ * Esta es una función de JavaScript que maneja operaciones CRUD para una entidad "Rol", incluida la
+ * lista, creación, edición y eliminación de registros, así como la administración de permisos para
+ * cada registro.
+ */
 
 var suc_id = $('#SUC_IDx').val();
 

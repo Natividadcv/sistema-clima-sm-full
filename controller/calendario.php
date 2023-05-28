@@ -1,3 +1,6 @@
+/* Este es un script PHP que maneja las solicitudes de una aplicación web relacionada con un sistema de
+calendario. Incluye código para llamar a clases, inicializar objetos y realizar operaciones basadas
+en el valor del parámetro "op" pasado en la solicitud. */
 <?php
     /* TODO: Llamando Clases */
     require_once("../config/conexion.php");

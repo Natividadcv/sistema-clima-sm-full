@@ -1,3 +1,7 @@
+/* Un código HTML para una ventana modal con el ID "modalpermiso". La ventana modal contiene un
+encabezado con el título "Permisos" y un botón de cierre, un cuerpo con una tabla con el ID
+"permisos_data" y dos columnas "Nombre" y una columna vacía, y un pie de página con un botón
+"Cerrar". La ventana modal está oculta por defecto. */
 <div id="modalpermiso" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
         <div class="modal-content">

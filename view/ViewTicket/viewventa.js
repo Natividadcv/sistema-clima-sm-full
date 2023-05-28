@@ -1,3 +1,9 @@
+/* Este código usa jQuery para realizar dos solicitudes AJAX POST a un script PHP que recupera y
+muestra información sobre una venta (identificada por un parámetro en la URL) en una página web. La
+primera solicitud recupera información general sobre la venta (como el nombre del cliente y el monto
+total), y la segunda solicitud recupera una lista de artículos incluidos en la venta. Los datos
+recuperados luego se usan para actualizar varios elementos HTML en la página. La función
+`getUrlParameter` es una función auxiliar que extrae el valor de un parámetro de la URL. */
 $(document).ready(function(){
     var vent_id = getUrlParameter('v');
 

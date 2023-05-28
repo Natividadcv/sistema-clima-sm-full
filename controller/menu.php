@@ -1,3 +1,6 @@
+/* Este es un script PHP que maneja diferentes operaciones relacionadas con un sistema de menús.
+Incluye código para llamar a clases, inicializar objetos y realizar diferentes acciones según el
+valor del parámetro "op" pasado a través de la URL. */
 <?php
     /* TODO: Llamando Clases */
     require_once("../config/conexion.php");

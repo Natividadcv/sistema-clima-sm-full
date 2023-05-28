@@ -1,3 +1,7 @@
+/**
+ * Esta es una función de JavaScript que maneja operaciones CRUD para una tabla de proveedores,
+ * incluida la validación de formularios y la recuperación de datos mediante AJAX.
+ */
 const telInput = document.getElementById("prov_telf");
 const nit = document.getElementById("prov_ruc");
 

@@ -1,3 +1,9 @@
+/* Este es un script PHP que maneja varias operaciones relacionadas con una entidad de usuario en una
+aplicación web. Incluye funciones para insertar, actualizar y eliminar registros de usuarios, así
+como recuperar y mostrar datos de usuarios en formato JSON para usar con un complemento de
+DataTables. El script también incluye funcionalidad para actualizar la contraseña de un usuario.
+Requiere la inclusión de otros dos archivos PHP: "conexion.php" y "Usuario.php", que contienen
+definiciones de conexión a base de datos y clase de usuario, respectivamente. */
 <?php
     /* TODO: Llamando Clases */
     require_once("../config/conexion.php");

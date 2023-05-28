@@ -1,3 +1,7 @@
+/* El código anterior es un script PHP que maneja operaciones CRUD para un sistema de gestión de
+productos. Incluye funciones para insertar, actualizar y eliminar registros de productos, así como
+recuperar y mostrar datos de productos en varios formatos. El script también incluye funciones para
+recuperar y mostrar datos de consumo de productos. */
 <?php
     /* TODO: Llamando Clases */
     require_once("../config/conexion.php");

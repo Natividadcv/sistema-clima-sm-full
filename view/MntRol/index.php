@@ -1,3 +1,9 @@
+/* Este es un código PHP que incluye varios archivos y crea una página HTML con una tabla para mostrar
+y administrar roles. Primero incluye el archivo de conexión de la base de datos y el archivo del
+modelo Rol. Luego, llama a una función para validar el acceso del usuario al módulo "mntrol". Si el
+usuario tiene acceso, crea una página HTML con una tabla para mostrar los roles. También incluye
+varios otros archivos, como el encabezado, el menú, el pie de página y los archivos JavaScript.
+Finalmente, incluye un archivo JavaScript para manejar los eventos y acciones en la página. */
 <?php
     require_once("../../config/conexion.php");
     require_once("../../models/Rol.php");

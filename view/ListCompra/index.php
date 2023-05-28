@@ -1,3 +1,6 @@
+/* Este es un código PHP que incluye varios archivos requeridos y verifica si el usuario tiene acceso a
+la función "listcompra". Si el usuario tiene acceso, muestra una página HTML con una tabla que
+muestra una lista de compras. La tabla se rellena dinámicamente mediante JavaScript. */
 <?php
     require_once("../../config/conexion.php");
     require_once("../../models/Rol.php");

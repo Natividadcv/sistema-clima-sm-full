@@ -1,3 +1,9 @@
+/* El código anterior es un script PHP que muestra un formulario para crear una nueva orden de compra.
+Incluye campos para seleccionar el tipo de pago, el proveedor y el producto a comprar. También
+incluye una tabla para mostrar los detalles de la orden de compra, así como botones para guardar y
+borrar el formulario. El script requiere autenticación y autorización para acceder, e incluye
+referencias a otros archivos PHP y código JavaScript para manejar el envío de formularios y la
+validación de datos. */
 <?php
     require_once("../../config/conexion.php");
     require_once("../../models/Rol.php");

@@ -1,3 +1,8 @@
+/* Este es un script PHP que maneja diferentes operaciones relacionadas con un objeto "Rol" (rol).
+Incluye funciones para insertar, actualizar, eliminar y recuperar datos de la base de datos, así
+como para generar una lista de registros en formato JSON para usar con la biblioteca Datatable JS.
+El script también incluye una declaración de cambio que determina qué operación realizar en función
+del valor del parámetro "op" pasado en la URL. */
 <?php
     /* TODO: Llamando Clases */
     require_once("../config/conexion.php");

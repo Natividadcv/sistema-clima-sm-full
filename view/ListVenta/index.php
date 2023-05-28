@@ -1,3 +1,10 @@
+/* Este es un código PHP que muestra una lista de ventas en una página web. Primero incluye los
+archivos necesarios para la conexión a la base de datos y el modelo Rol. Luego verifica si el
+usuario tiene acceso para ver la lista de ventas al validar su ID de usuario y rol. Si el usuario
+tiene acceso, muestra el código HTML para la página de la lista de ventas, que incluye una tabla con
+columnas para la información de ventas, como el número de documento, el nombre del cliente, el
+método de pago y el monto total. También incluye código JavaScript para manejar los datos de la
+tabla. Si el usuario no tiene acceso, lo redirige a una página de error 404. */
 <?php
     require_once("../../config/conexion.php");
     require_once("../../models/Rol.php");

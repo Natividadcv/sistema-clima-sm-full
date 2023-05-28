@@ -1,3 +1,9 @@
+/* Esta es una ventana modal en HTML con el id "modaldetalle". Contiene un encabezado con un título, un
+botón de cierre, un cuerpo con dos tablas y un pie de página con un botón de cierre. La primera
+tabla tiene un id "detalle_data" y muestra una lista de artículos con sus categorías, productos,
+unidades, precios de compra, cantidades y totales. La segunda tabla muestra el subtotal, el IVA
+(impuestos) y el total de la compra. La ventana modal está oculta de forma predeterminada
+(style="display: none;") y se puede activar para que se muestre usando JavaScript o jQuery. */
 <div id="modaldetalle" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">

@@ -1,3 +1,8 @@
+/* Este es un script PHP que maneja una solicitud con una declaración de cambio. Comprueba el valor del
+parámetro "op" en la solicitud y ejecuta diferentes bloques de código en función de su valor. En
+este caso, si el parámetro "op" es "combo", llamará a un método de la clase "Pago" para recuperar
+datos y generar código HTML para una lista desplegable. El código HTML generado se repite como
+respuesta a la solicitud. */
 <?php
     /* TODO: Llamando Clases */
     require_once("../config/conexion.php");

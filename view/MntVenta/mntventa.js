@@ -1,3 +1,10 @@
+/**
+ * Esta es una función de JavaScript que maneja el registro de ventas y sus detalles, incluida la
+ * selección de productos, el cálculo de totales y el almacenamiento de la venta en una base de datos.
+ * @param detv_id - Este parámetro se utiliza en la función "eliminar(detv_id, vent_id)" para
+ * identificar el ID del detalle de la venta que se desea eliminar.
+ * @param vent_id - El ID de la venta actual que se está procesando.
+ */
 var emp_id = $("#EMP_IDx").val();
 var suc_id = $("#SUC_IDx").val();
 var usu_id = $("#USU_IDx").val();
@@ -114,11 +121,14 @@ $(document).on("click", "#btnagregar", function () {
   var prod_id = $("#prod_id").val();
   var prod_pventa = $("#prod_pventa").val();
   var detv_cant = $("#detv_cant").val();
+  var detv_descun = $("#detv_descun").val();
+
 
   if (
     $("#prod_id").val() == "" ||
     $("#prod_pventa").val() == "" ||
-    $("#detv_cant").val() == ""
+    $("#detv_cant").val() == "" ||
+    $("#detv_descun").val() == ""
   ) {
     // Manejar el error de campos vacíos
     swal.fire({
@@ -146,6 +156,7 @@ $(document).on("click", "#btnagregar", function () {
           prod_id: prod_id,
           prod_pventa: prod_pventa,
           detv_cant: detv_cant,
+          detv_descun: detv_descun,
         },
         function (data) {
           console.log(data);
@@ -167,6 +178,7 @@ $(document).on("click", "#btnagregar", function () {
       // Limpiar los campos después de agregar un detalle de venta
       $("#prod_pventa").val("");
       $("#detv_cant").val("");
+      $("#detv_descun").val("");
 
       // Listar los detalles de venta actualizados
       listar(vent_id);

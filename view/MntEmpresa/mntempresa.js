@@ -1,3 +1,7 @@
+/**
+ * Esta es una función de JavaScript que maneja operaciones CRUD para una tabla de empresa usando AJAX
+ * y DataTables.
+ */
 
 var com_id = $('#COM_IDx').val();
 

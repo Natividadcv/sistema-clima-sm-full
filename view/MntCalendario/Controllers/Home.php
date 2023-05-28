@@ -1,3 +1,5 @@
+/* La clase Home es un controlador de PHP que maneja el registro, la modificación, el listado y la
+eliminación de eventos, así como la funcionalidad de arrastrar y soltar. */
 <?php
 class Home extends Controller
 {

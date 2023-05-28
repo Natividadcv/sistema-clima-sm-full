@@ -1,3 +1,9 @@
+/* Este es un código HTML para una ventana modal con un formulario para mantenimiento. Tiene un
+identificador único "modalmantenimiento" y contiene un formulario con campos de ingreso de
+información del cliente como nombre, NIT, teléfono, dirección y correo electrónico. El formulario
+tiene dos botones, uno para cerrar la ventana modal y el otro para enviar el formulario. La ventana
+modal está oculta de forma predeterminada y se puede activar para que se muestre mediante JavaScript
+o jQuery. */
 <div id="modalmantenimiento" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
         <div class="modal-content">

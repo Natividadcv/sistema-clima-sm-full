@@ -1,107 +1,113 @@
-var suc_id = $('#SUC_IDx').val();
+/**
+ * Esta es una función de JavaScript que usa DataTables para mostrar y manipular datos relacionados con
+ * compras, incluida una subfunción para calcular los totales de compras y mostrarlos en un modal.
+ * @param compr_id - Este parámetro representa el ID de una compra específica. Se utiliza en la función
+ * "ver" para recuperar los detalles de la compra y mostrarlos en un modal.
+ */
+    var suc_id = $('#SUC_IDx').val();
 
-$(document).ready(function(){
+    $(document).ready(function(){
 
-    $('#table_data').DataTable({
-        "aProcessing": true,
-        "aServerSide": true,
-        dom: 'Bfrtip',
-        buttons: [
-            'copyHtml5',
-            'excelHtml5',
-            'csvHtml5',
-        ],
-        "ajax":{
-            url:"../../controller/compra.php?op=listarcompra",
-            type:"post",
-            data:{suc_id:suc_id}
-        },
-        "bDestroy": true,
-        "responsive": true,
-        "bInfo":true,
-        "iDisplayLength": 10,
-        "order": [[ 0, "desc" ]],
-        "language": {
-            "sProcessing":     "Procesando...",
-            "sLengthMenu":     "Mostrar _MENU_ registros",
-            "sZeroRecords":    "No se encontraron resultados",
-            "sEmptyTable":     "Ningún dato disponible en esta tabla",
-            "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-            "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
-            "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
-            "sInfoPostFix":    "",
-            "sSearch":         "Buscar:",
-            "sUrl":            "",
-            "sInfoThousands":  ",",
-            "sLoadingRecords": "Cargando...",
-            "oPaginate": {
-                "sFirst":    "Primero",
-                "sLast":     "Último",
-                "sNext":     "Siguiente",
-                "sPrevious": "Anterior"
+        $('#table_data').DataTable({
+            "aProcessing": true,
+            "aServerSide": true,
+            dom: 'Bfrtip',
+            buttons: [
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
+            ],
+            "ajax":{
+                url:"../../controller/compra.php?op=listarcompra",
+                type:"post",
+                data:{suc_id:suc_id}
             },
-            "oAria": {
-                "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
-                "sSortDescending": ": Activar para ordenar la columna de manera descendente"
-            }
-        },
-    });
-
-});
-
-function ver(compr_id){
-
-    $('#detalle_data').DataTable({
-        "aProcessing": true,
-        "aServerSide": true,
-        dom: 'Bfrtip',
-        buttons: [
-            'copyHtml5',
-            'excelHtml5',
-            'csvHtml5',
-        ],
-        "ajax":{
-            url:"../../controller/compra.php?op=listardetalle",
-            type:"post",
-            data:{compr_id:compr_id}
-        },
-        "bDestroy": true,
-        "responsive": true,
-        "bInfo":true,
-        "iDisplayLength": 10,
-        "order": [[ 0, "desc" ]],
-        "language": {
-            "sProcessing":     "Procesando...",
-            "sLengthMenu":     "Mostrar _MENU_ registros",
-            "sZeroRecords":    "No se encontraron resultados",
-            "sEmptyTable":     "Ningún dato disponible en esta tabla",
-            "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-            "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
-            "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
-            "sInfoPostFix":    "",
-            "sSearch":         "Buscar:",
-            "sUrl":            "",
-            "sInfoThousands":  ",",
-            "sLoadingRecords": "Cargando...",
-            "oPaginate": {
-                "sFirst":    "Primero",
-                "sLast":     "Último",
-                "sNext":     "Siguiente",
-                "sPrevious": "Anterior"
+            "bDestroy": true,
+            "responsive": true,
+            "bInfo":true,
+            "iDisplayLength": 10,
+            "order": [[ 0, "desc" ]],
+            "language": {
+                "sProcessing":     "Procesando...",
+                "sLengthMenu":     "Mostrar _MENU_ registros",
+                "sZeroRecords":    "No se encontraron resultados",
+                "sEmptyTable":     "Ningún dato disponible en esta tabla",
+                "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+                "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+                "sInfoPostFix":    "",
+                "sSearch":         "Buscar:",
+                "sUrl":            "",
+                "sInfoThousands":  ",",
+                "sLoadingRecords": "Cargando...",
+                "oPaginate": {
+                    "sFirst":    "Primero",
+                    "sLast":     "Último",
+                    "sNext":     "Siguiente",
+                    "sPrevious": "Anterior"
+                },
+                "oAria": {
+                    "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                    "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                }
             },
-            "oAria": {
-                "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
-                "sSortDescending": ": Activar para ordenar la columna de manera descendente"
-            }
-        },
+        });
+
     });
 
-    $.post("../../controller/compra.php?op=calculo",{compr_id:compr_id},function(data){
-        data=JSON.parse(data);
-        $('#txtsubtotal').html(data.COMPR_SUBTOTAL);
-        $('#txtigv').html(data.COMPR_IGV);
-        $('#txttotal').html(data.COMPR_TOTAL);
-    });
+    function ver(compr_id){
 
-    $('#modaldetalle').modal('show');
-}
+        $('#detalle_data').DataTable({
+            "aProcessing": true,
+            "aServerSide": true,
+            dom: 'Bfrtip',
+            buttons: [
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
+            ],
+            "ajax":{
+                url:"../../controller/compra.php?op=listardetalle",
+                type:"post",
+                data:{compr_id:compr_id}
+            },
+            "bDestroy": true,
+            "responsive": true,
+            "bInfo":true,
+            "iDisplayLength": 10,
+            "order": [[ 0, "desc" ]],
+            "language": {
+                "sProcessing":     "Procesando...",
+                "sLengthMenu":     "Mostrar _MENU_ registros",
+                "sZeroRecords":    "No se encontraron resultados",
+                "sEmptyTable":     "Ningún dato disponible en esta tabla",
+                "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+                "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+                "sInfoPostFix":    "",
+                "sSearch":         "Buscar:",
+                "sUrl":            "",
+                "sInfoThousands":  ",",
+                "sLoadingRecords": "Cargando...",
+                "oPaginate": {
+                    "sFirst":    "Primero",
+                    "sLast":     "Último",
+                    "sNext":     "Siguiente",
+                    "sPrevious": "Anterior"
+                },
+                "oAria": {
+                    "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                    "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                }
+            },
+        });
+
+        $.post("../../controller/compra.php?op=calculo",{compr_id:compr_id},function(data){
+            data=JSON.parse(data);
+            $('#txtsubtotal').html(data.COMPR_SUBTOTAL);
+            $('#txtigv').html(data.COMPR_IGV);
+            $('#txttotal').html(data.COMPR_TOTAL);
+        });
+
+        $('#modaldetalle').modal('show');
+    }

@@ -1,3 +1,11 @@
+/* El código anterior es un script PHP que maneja varias operaciones relacionadas con compras, como
+registrar una compra, insertar detalles de compra, calcular el subtotal, eliminar un detalle de
+compra, enumerar detalles de compra, actualizar una compra, mostrar datos de compra por ID, enumerar
+todo compras por una sucursal específica, mostrando los 5 productos comprados principales, mostrando
+las 5 compras recientes principales, mostrando las actividades de compra recientes para el tablero y
+mostrando el consumo de compras por categoría para el tablero. El script usa una clase de compra e
+interactúa con una base de datos para realizar estas operaciones. El código incluye una declaración
+de cambio que determina qué operación realizar en función de */
 
 <?php
     /* TODO: Llamando Clases */
@@ -5,15 +13,6 @@
     require_once("../models/Compra.php");
     /* TODO: Inicializando clase */
     $compra = new Compra();
-
-    /* El código anterior es un script PHP que maneja varias operaciones relacionadas con las compras, como
-    registrar una compra, insertar detalles de compra, calcular el subtotal, eliminar un detalle de
-    compra, enumerar detalles de compra, actualizar una compra, mostrar datos de compra por ID, enumerar
-    todas las compras por una sucursal específica, mostrando los 5 principales productos comprados,
-    mostrando las 5 compras recientes principales, mostrando las actividades de compra recientes para el
-    tablero y mostrando el consumo de compras por categoría para el tablero. El script usa una clase
-    Compra e interactúa con una base de datos para realizar estas operaciones. */
-
 
     switch($_GET["op"]){
 

@@ -1,3 +1,9 @@
+/* Este es un script PHP que maneja diferentes operaciones basadas en el valor del parámetro "op" en la
+matriz . Incluye funciones para insertar, actualizar, eliminar y recuperar datos de una tabla
+de base de datos para un sistema de gestión de clientes. También incluye una función para generar
+una lista de registros en formato JSON para usar con la biblioteca Datatable JS. El script usa una
+declaración de cambio para determinar qué operación realizar en función del valor del parámetro
+"op". */
 <?php
     /* TODO: Llamando Clases */
     require_once("../config/conexion.php");

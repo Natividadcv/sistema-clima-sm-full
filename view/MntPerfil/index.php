@@ -1,3 +1,10 @@
+/* Este es un código PHP que incluye varios archivos y crea una página HTML con un formulario para
+actualizar la contraseña del usuario. Primero requiere el archivo de conexión y el archivo del
+modelo Rol. Luego, crea una nueva instancia de la clase Rol y llama al método validar_acceso_rol
+para verificar si el usuario tiene acceso al módulo "mntperfil". Si el usuario tiene acceso, crea
+una página HTML con un formulario para actualizar la contraseña. Si no, redirige al usuario a una
+página de error 404. El formulario incluye dos campos de contraseña y un botón para enviar el
+formulario. También incluye un archivo JavaScript para manejar el envío del formulario. */
 <?php
     require_once("../../config/conexion.php");
     require_once("../../models/Rol.php");

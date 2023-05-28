@@ -1,3 +1,8 @@
+/* Este código realiza varias solicitudes AJAX a diferentes archivos PHP para recuperar datos y
+mostrarlos en varios gráficos y tablas en una página web. La variable `suc_id` se utiliza como
+parámetro en las solicitudes para filtrar los datos por una ubicación de tienda específica. El
+código usa la biblioteca Chart.js para crear los gráficos y jQuery para realizar las solicitudes
+AJAX y manipular los elementos HTML en la página. */
 var suc_id = $('#SUC_IDx').val();
 
 $.post("../../controller/compra.php?op=listartopproducto",{suc_id:suc_id},function(data){

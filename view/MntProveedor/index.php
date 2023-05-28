@@ -1,3 +1,4 @@
+/* Este es un código PHP que incluye varios archivos y genera una página HTML con una tabla de datos. */
 <?php
     require_once("../../config/conexion.php");
     require_once("../../models/Rol.php");

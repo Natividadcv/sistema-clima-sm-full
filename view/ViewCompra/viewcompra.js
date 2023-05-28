@@ -1,3 +1,9 @@
+/* Este código usa jQuery para realizar dos solicitudes AJAX POST a un script PHP que recupera y
+muestra información sobre una orden de compra. La primera solicitud recupera información general
+sobre la orden de compra y completa varios elementos HTML con esa información. La segunda solicitud
+recupera una lista de artículos incluidos en la orden de compra y los formatea en una tabla HTML. La
+función `getUrlParameter` es una función auxiliar que extrae un parámetro específico de la cadena de
+consulta de URL. */
 $(document).ready(function(){
     var compr_id = getUrlParameter('c');
 

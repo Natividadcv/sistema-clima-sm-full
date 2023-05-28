@@ -1,3 +1,5 @@
+/* La clase HomeModel contiene métodos para registrar, modificar y eliminar eventos, así como recuperar
+información de clientes y productos. */
 <?php
 class HomeModel extends Query{
     public function __construct()
@@ -18,13 +20,6 @@ class HomeModel extends Query{
     }
     public function getEventos()
     { 
-        //  // Filter events by calendar date 
-        //     $where_sql = ''; 
-        //     if(!empty($_GET['start']) && !empty($_GET['end'])){ 
-        //         $where_sql .= " WHERE start BETWEEN '".$_GET['start']."' AND '".$_GET['end']."' "; 
-        //     } 
-        //     // Fetch events from database 
-        //     $sql = "SELECT * FROM evento $where_sql"; 
 
         $sql = "SELECT * FROM evento WHERE instalacion_completada = 0";
         return $this->selectAll($sql);
@@ -43,9 +38,6 @@ class HomeModel extends Query{
         return $this->selectAll($sql);
 
     }
-
-
-
 
     public function modificar($title, $servicio, $inicio, $end, $cliente, $productoId, $direccion, $referencia, $instalacion_coment, $color, $id)
     { 

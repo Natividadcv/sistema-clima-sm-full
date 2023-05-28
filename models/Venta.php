@@ -14,15 +14,16 @@ class Venta extends Conectar
     return $query->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  public function insert_venta_detalle($vent_id, $prod_id, $prod_pventa, $detv_cant)
+  public function insert_venta_detalle($vent_id, $prod_id, $prod_pventa, $detv_cant, $detv_descu)
   {
     $conectar = parent::Conexion();
-    $sql = "CALL SP_I_VENTA_02 (?,?,?,?)";
+    $sql = "CALL SP_I_VENTA_02_PRO (?,?,?,?,?)";
     $query = $conectar->prepare($sql);
     $query->bindValue(1, $vent_id);
     $query->bindValue(2, $prod_id);
     $query->bindValue(3, $prod_pventa);
     $query->bindValue(4, $detv_cant);
+    $query->bindValue(5, $detv_descu);
     $query->execute();
     //return $query->fetchAll(PDO::FETCH_ASSOC);
   }
@@ -49,7 +50,7 @@ class Venta extends Conectar
   public function get_venta_calculo($vent_id)
   {
     $conectar = parent::Conexion();
-    $sql = "CALL SP_U_VENTA_01 (?)";
+    $sql = "CALL SP_U_VENTA_01_CALCULO (?)";
     $query = $conectar->prepare($sql);
     $query->bindValue(1, $vent_id);
     $query->execute();

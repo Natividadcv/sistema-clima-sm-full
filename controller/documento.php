@@ -1,3 +1,8 @@
+/* Este es un script PHP que maneja una solicitud con una declaración de cambio. El script espera un
+parámetro GET llamado "op" para determinar qué caso ejecutar. En este caso, si el valor de "op" es
+"combo", el script llamará a un método llamado "get_documento" de una clase llamada "Documento" y le
+pasará un parámetro POST llamado "doc_tipo". Luego generará código HTML para una lista desplegable
+basada en los datos devueltos por el método y lo repetirá. */
 <?php
     /* TODO: Llamando Clases */
     require_once("../config/conexion.php");

@@ -1,3 +1,8 @@
+/* Este es un código PHP que se usa para mostrar una página web para administrar una lista de
+sucursales. Incluye código HTML, CSS y JavaScript para crear la interfaz de usuario y código PHP
+para interactuar con la base de datos y validar los permisos de acceso de los usuarios. El código
+verifica si el usuario ha iniciado sesión y tiene los permisos necesarios para acceder a la página,
+y luego muestra una tabla de sucursales con opciones para agregarlas, editarlas o eliminarlas. */
 <?php
     require_once("../../config/conexion.php");
     require_once("../../models/Rol.php");

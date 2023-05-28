@@ -1,3 +1,8 @@
+/* Este es un código PHP que incluye varios archivos y crea una página HTML con una tabla de clientes.
+También incluye un archivo JavaScript para manejar el mantenimiento de los clientes. El código
+primero verifica si el usuario está logueado y tiene acceso al módulo "mntcliente". Si el usuario
+tiene acceso, crea una página HTML con una tabla de clientes y un botón para agregar un nuevo
+cliente. Si el usuario no tiene acceso, redirige a una página de error 404. */
 <?php
     require_once("../../config/conexion.php");
     require_once("../../models/Rol.php");

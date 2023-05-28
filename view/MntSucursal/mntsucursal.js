@@ -1,3 +1,7 @@
+/**
+ * Esta es una función de JavaScript que maneja operaciones CRUD para una tabla de sucursales de la
+ * empresa, incluida la adición, edición y eliminación de registros.
+ */
 var emp_id = $('#EMP_IDx').val();
 
 function init(){

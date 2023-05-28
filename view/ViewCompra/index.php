@@ -1,3 +1,10 @@
+/* El código anterior es un script PHP que muestra una vista de una orden de compra. Primero verifica
+si el usuario ha iniciado sesión y tiene acceso para ver las órdenes de compra. Si es así, muestra
+los detalles de la orden de compra, incluida la información del proveedor, la información del
+usuario y una tabla de artículos comprados. También calcula y muestra el subtotal, los impuestos y
+el costo total de la orden de compra. La vista incluye un botón de impresión y una sección de
+comentarios. El script requiere otros archivos PHP para la conexión a la base de datos y las
+funciones del modelo. */
 <?php
     require_once("../../config/conexion.php");
     require_once("../../models/Rol.php");

@@ -1,3 +1,7 @@
+/**
+ * El código es para administrar los datos de los usuarios, incluidas la adición, edición y eliminación
+ * de usuarios, así como para mostrar los datos de los usuarios en formato de tabla.
+ */
 var suc_id = $("#SUC_IDx").val();
 
 function init() {

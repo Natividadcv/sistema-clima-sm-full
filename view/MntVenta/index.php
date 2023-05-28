@@ -1,3 +1,7 @@
+/* El código anterior es un script PHP que muestra un formulario para crear una nueva venta. Incluye
+campos para seleccionar el tipo de pago, información del cliente y detalles del producto. También
+incluye una tabla para mostrar los artículos en venta y calcular el costo total. El script requiere
+autenticación y validación de permisos antes de permitir el acceso al formulario. */
 <?php
     require_once("../../config/conexion.php");
     require_once("../../models/Rol.php");
@@ -178,6 +182,14 @@
                                                 <input type="number" class="form-control" id="detv_cant" name="detv_cant" placeholder="Cant."/>
                                             </div>
 
+                                            <div class="col-lg-1">
+                                                <label for="detv_descun" class="form-label">Desc.</label>
+                                                <input type="number" class="form-control" id="detv_descun" name="detv_descun" placeholder="Desc."/>
+                                            </div>
+
+
+                                          
+
                                             <div class="col-lg-1 d-grid gap-1">
                                                 <label for="comp_cant" class="form-label">&nbsp;</label>
                                                 <button type="button" id="btnagregar" class="btn btn-primary btn-icon waves-effect waves-light"><i class="ri-add-box-line"></i></button>
@@ -208,6 +220,7 @@
                                                 <th>Und</th>
                                                 <th>P.Compra</th>
                                                 <th>Cant</th>
+                                                <th>Desc</th>
                                                 <th>Total</th>
                                                 <th></th>
                                             </tr>
@@ -223,6 +236,10 @@
                                             <tr>
                                                 <td>Sub Total</td>
                                                 <td class="text-end" id="txtsubtotal">0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Descuento</td>
+                                                <td class="text-end" id="txtdescuento">0</td>
                                             </tr>
                                             <tr>
                                                 <td>IVA (13%)</td>

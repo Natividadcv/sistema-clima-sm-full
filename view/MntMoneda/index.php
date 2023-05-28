@@ -1,3 +1,8 @@
+/* Este es un código PHP que incluye varios archivos y crea una página HTML con una tabla para mostrar
+una lista de monedas. También incluye un botón para agregar una nueva moneda y un archivo JavaScript
+para manejar la funcionalidad de la página. El código también verifica si el usuario tiene los
+permisos necesarios para acceder a la página y lo redirige a una página de error 404 si no los
+tiene. */
 <?php
     require_once("../../config/conexion.php");
     require_once("../../models/Rol.php");

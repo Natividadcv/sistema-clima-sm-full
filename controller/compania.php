@@ -1,3 +1,9 @@
+/* Este es un script PHP que maneja diferentes operaciones relacionadas con la entidad de una empresa.
+Incluye funciones para insertar, actualizar, eliminar y recuperar datos de una tabla de base de
+datos. También incluye una declaración de cambio que determina qué operación realizar en función del
+valor del parámetro "op" pasado a través de la URL. El script genera datos JSON para las operaciones
+"listar" y "mostrar". El script requiere los archivos "conexion.php" y "Compania.php", e inicializa
+una instancia de la clase "Compañía". */
 <?php
     /* TODO: Llamando Clases */
     require_once("../config/conexion.php");

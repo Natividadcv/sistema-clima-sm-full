@@ -1,3 +1,9 @@
+/* Este es un script PHP que maneja diferentes operaciones relacionadas con una entidad "Sucursal"
+(sucursal). Incluye funciones para insertar, actualizar, eliminar y recuperar datos de la base de
+datos. También incluye una función para generar una lista de registros en formato JSON para usar con
+la biblioteca Datatable JS. El script usa una clase "Sucursal" y requiere un archivo de conexión de
+base de datos y el archivo de modelo "Sucursal". El script recibe la operación a realizar a través
+del parámetro "op" en la URL. */
 <?php
     /* TODO: Llamando Clases */
     require_once("../config/conexion.php");

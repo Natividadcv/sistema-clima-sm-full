@@ -1,3 +1,8 @@
+/* El código anterior es un script PHP que muestra una página web para gestionar citas para la
+instalación y mantenimiento de aire acondicionado. Incluye código HTML, CSS y JavaScript para crear
+un calendario y un formulario para agregar y editar citas. También incluye código para gestionar la
+autenticación y autorización de usuarios, así como consultas a bases de datos para recuperar y
+actualizar datos de citas. */
 <?php
 require_once("../../config/conexion.php");
 require_once("../../models/Rol.php");

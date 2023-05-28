@@ -1,3 +1,8 @@
+/* El código anterior es un código HTML y PHP para una página de destino de un sitio web que permite a
+los usuarios elegir entre dos empresas y redirigirlos a una página de inicio de sesión según su
+selección. La página de inicio incluye una barra de navegación, una sección con información sobre
+las empresas y un pie de página con enlaces a redes sociales. La página también incluye varias
+bibliotecas de CSS y JavaScript para estilo y funcionalidad. */
 <!doctype html>
 <html lang="es" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none">
 

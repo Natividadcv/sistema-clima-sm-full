@@ -1,3 +1,8 @@
+/* Este es un código HTML para una ventana modal con el id "modaldetalle". Contiene un encabezado con
+un título y un botón de cierre, un cuerpo con dos tablas para mostrar los detalles de una venta y
+calcular el total, y un pie de página con un botón de cierre. El modal está oculto de forma
+predeterminada (style="display: none;") y se puede activar para que se muestre usando JavaScript o
+jQuery. */
 <div id="modaldetalle" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -17,6 +22,7 @@
                             <th>Und</th>
                             <th>P.Venta</th>
                             <th>Cant</th>
+                            <th>Descu</th>
                             <th>Total</th>
                         </tr>
                     </thead>
@@ -31,6 +37,10 @@
                         <tr>
                             <td>Sub Total</td>
                             <td class="text-end" id="txtsubtotal">0</td>
+                        </tr>
+                        <tr>
+                            <td>Descuento</td>
+                            <td class="text-end" id="txtdescuento">0</td>
                         </tr>
                         <tr>
                             <td>IVA (13%)</td>

@@ -1,3 +1,9 @@
+/* Este es un script PHP que maneja varias operaciones relacionadas con un objeto "unidad". Incluye
+código para manejar guardar y editar registros de unidades, enumerar registros de unidades en
+formato JSON para usar con la biblioteca Datatable JS, mostrar información para un registro de
+unidad específico, eliminar un registro de unidad y enumerar unidades en un cuadro combinado. El
+script usa una clase "Unidad" y requiere un archivo de conexión a la base de datos. También usa
+variables GET y POST para determinar qué operación realizar y qué datos usar. */
 <?php
     /* TODO: Llamando Clases */
     require_once("../config/conexion.php");

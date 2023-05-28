@@ -1,3 +1,8 @@
+/* El código anterior es un script PHP que muestra una vista de una transacción de venta. Primero
+verifica si el usuario ha iniciado sesión y tiene acceso para ver las transacciones de ventas. Si el
+usuario tiene acceso, muestra la vista que incluye información sobre la transacción de venta, como
+el cliente, el usuario, los productos vendidos y el monto total. También incluye un botón de
+impresión para imprimir los detalles de la transacción. */
 <?php
     require_once("../../config/conexion.php");
     require_once("../../models/Rol.php");
@@ -144,6 +149,7 @@
                                                             <th scope="col" style="width: 50px;">Und</th>
                                                             <th scope="col">P.Venta</th>
                                                             <th scope="col">Cant.</th>
+                                                            <th scope="col">Desc.</th>
                                                             <th scope="col" class="text-end">Total</th>
                                                         </tr>
                                                     </thead>

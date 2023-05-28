@@ -1,3 +1,9 @@
+/* Este es un script PHP que maneja diferentes operaciones relacionadas con una entidad "Proveedor"
+(proveedor). Incluye funciones para insertar, actualizar, eliminar y recuperar datos de la base de
+datos. También incluye una función para generar una lista de proveedores en formato JSON para usar
+con la biblioteca JavaScript de DataTables. El script usa una clase llamada "Proveedor" y requiere
+un archivo de conexión a la base de datos. Las operaciones están determinadas por el valor del
+parámetro "op" pasado a través de la URL. */
 <?php
     /* TODO: Llamando Clases */
     require_once("../config/conexion.php");

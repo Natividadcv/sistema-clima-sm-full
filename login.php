@@ -1,3 +1,8 @@
+/* El código anterior es un script PHP que muestra una página de inicio de sesión para una aplicación
+web. Incluye código HTML y CSS para el diseño de la página, así como código JavaScript para varias
+funcionalidades, como alternar la visibilidad de la contraseña y menús desplegables select2. El
+script PHP también incluye código para manejar el envío de formularios y la autenticación utilizando
+la clase Usuario del directorio de modelos. */
 <?php
 require_once("config/conexion.php");
 if (isset($_POST["enviar"]) and $_POST["enviar"] == "si") {

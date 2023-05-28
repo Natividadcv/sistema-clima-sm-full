@@ -1,3 +1,9 @@
+/* Este es un código PHP que incluye varios archivos y crea una página HTML con una tabla para mantener
+las categorías. Primero incluye el archivo de conexión de la base de datos y el archivo del modelo
+Rol. Luego crea una nueva instancia de la clase Rol y llama al método validar_acceso_rol para
+verificar si el usuario tiene acceso al módulo "mntcategoria". Si el usuario tiene acceso, crea una
+página HTML con una tabla para el mantenimiento de categorías. Si el usuario no tiene acceso,
+redirige a una página de error 404. */
 <?php
     require_once("../../config/conexion.php");
     require_once("../../models/Rol.php");

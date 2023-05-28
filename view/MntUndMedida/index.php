@@ -1,3 +1,8 @@
+/* Este es un código PHP que verifica si el usuario está logueado y tiene acceso a una página
+determinada (mntundmedida). Si el usuario ha iniciado sesión y tiene acceso, muestra una página HTML
+con una tabla que muestra datos de una tabla de base de datos. También incluye código JavaScript
+para manejar eventos en la página. Si el usuario no ha iniciado sesión o no tiene acceso, lo
+redirige a una página de error 404. */
 <?php
     require_once("../../config/conexion.php");
     require_once("../../models/Rol.php");

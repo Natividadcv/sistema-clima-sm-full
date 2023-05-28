@@ -1,3 +1,7 @@
+/**
+ * Esta es una función de JavaScript que maneja las operaciones CRUD para una tabla de divisas usando
+ * AJAX y DataTables.
+ */
 var suc_id = $('#SUC_IDx').val();
 
 function init(){

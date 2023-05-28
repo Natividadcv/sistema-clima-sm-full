@@ -1,3 +1,5 @@
+/* Este código usa jQuery para realizar algunas acciones cuando el documento está listo. También define
+una función llamada `getUrlParameter` que se utiliza para extraer un parámetro de la URL. */
 $(document).ready(function(){
 
     var com_id = getUrlParameter('c');

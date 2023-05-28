@@ -1,3 +1,8 @@
+/**
+ * Esta es una función de JavaScript que maneja las operaciones CRUD para un formulario de
+ * mantenimiento de unidades, incluida la adición, edición y eliminación de registros, así como la
+ * lista de registros existentes en un DataTable.
+ */
 var suc_id = $('#SUC_IDx').val();
 
 function init(){

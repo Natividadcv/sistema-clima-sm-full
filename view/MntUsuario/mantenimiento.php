@@ -1,3 +1,8 @@
+/* Este es un código HTML para una ventana modal con un formulario para fines de mantenimiento. La
+ventana modal está oculta de forma predeterminada y se puede activar para que se muestre mediante
+JavaScript o jQuery. El formulario contiene campos de entrada de correo electrónico, nombre,
+apellido, NIT, número de teléfono, contraseña, rol e imagen. También incluye botones para guardar y
+cerrar la ventana modal. */
 <div id="modalmantenimiento" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
         <div class="modal-content">

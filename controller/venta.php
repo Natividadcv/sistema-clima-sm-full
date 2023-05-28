@@ -1,3 +1,8 @@
+/* El código anterior es un script PHP que maneja varias operaciones relacionadas con las ventas
+(ventas en español) en una aplicación web. Incluye funciones para registrar nuevas ventas, calcular
+el subtotal, el IGV y el total de una venta, listar y eliminar detalles de la venta, guardar y
+mostrar información de la venta y listar los productos más vendidos. El código interactúa con una
+base de datos a través de una clase Venta y usa JSON para comunicarse con el front-end. */
 <?php
 /* TODO: Llamando Clases */
 require_once("../config/conexion.php");
@@ -16,13 +21,14 @@ switch ($_GET["op"]) {
     break;
     /* TODO: Registrar detalle de venta */
   case "guardardetalle":
-    $datos = $venta->insert_venta_detalle($_POST["vent_id"], $_POST["prod_id"], $_POST["prod_pventa"], $_POST["detv_cant"]);
+    $datos = $venta->insert_venta_detalle($_POST["vent_id"], $_POST["prod_id"], $_POST["prod_pventa"], $_POST["detv_cant"], $_POST["detv_descuento"]);
     break;
     /* TODO: Calcular SUBTOTAL,IGV,TOTAL de venta */
   case "calculo":
     $datos = $venta->get_venta_calculo($_POST["vent_id"]);
     foreach ($datos as $row) {
       $output["VENT_SUBTOTAL"] = $row["VENT_SUBTOTAL"];
+      $output["VENT_DESCUENTO"] = $row["VENT_DESCUENTO"];
       $output["VENT_IGV"] = $row["VENT_IGV"];
       $output["VENT_TOTAL"] = $row["VENT_TOTAL"];
     }
@@ -58,6 +64,7 @@ switch ($_GET["op"]) {
       $sub_array[] = $row["UND_NOM"];
       $sub_array[] = $row["PROD_PVENTA"];
       $sub_array[] = $row["DETV_CANT"];
+      $sub_array[] = $row["DETV_DESCUENTO"];
       $sub_array[] = $row["DETV_TOTAL"];
       $sub_array[] = '<button type="button" onClick="eliminar(' . $row["DETV_ID"] . ',' . $row["VENT_ID"] . ')" id="' . $row["DETV_ID"] . '" class="btn btn-danger btn-icon waves-effect waves-light"><i class="ri-delete-bin-5-line"></i></button>';
       $data[] = $sub_array;
@@ -107,6 +114,7 @@ switch ($_GET["op"]) {
         <td scope="row"><?php echo $row["UND_NOM"]; ?></td>
         <td><?php echo $row["PROD_PVENTA"]; ?></td>
         <td><?php echo $row["DETV_CANT"]; ?></td>
+        <td><?php echo $row["DETV_DESCUENTO"]; ?></td>
         <td class="text-end"><?php echo $row["DETV_TOTAL"]; ?></td>
       </tr>
     <?php
@@ -139,6 +147,7 @@ switch ($_GET["op"]) {
       $output["CLI_DIRECC"] = $row["CLI_DIRECC"];
       $output["CLI_CORREO"] = $row["CLI_CORREO"];
       $output["VENT_SUBTOTAL"] = $row["VENT_SUBTOTAL"];
+      $output["VENT_DESCUENTO"] = $row["VENT_DESCUENTO"];
       $output["VENT_IGV"] = $row["VENT_IGV"];
       $output["VENT_TOTAL"] = $row["VENT_TOTAL"];
       $output["VENT_COMENT"] = $row["VENT_COMENT"];
@@ -174,6 +183,7 @@ switch ($_GET["op"]) {
       $sub_array[] = $row["PAG_NOM"];
       $sub_array[] = $row["MON_NOM"];
       $sub_array[] = $row["VENT_SUBTOTAL"];
+      $sub_array[] = $row["VENT_DESCUENTO"];
       $sub_array[] = $row["VENT_IGV"];
       $sub_array[] = $row["VENT_TOTAL"];
       $sub_array[] = $row["USU_NOM"] . " " . $row["USU_APE"];

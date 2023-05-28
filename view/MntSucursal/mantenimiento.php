@@ -1,3 +1,10 @@
+/* Este es un código HTML para una ventana modal con un formulario para propósitos de mantenimiento. La
+ventana modal está oculta de forma predeterminada y se puede activar para que se muestre mediante
+JavaScript o jQuery. El formulario dentro de la ventana modal tiene campos de entrada para "suc_id"
+y "suc_nom" con un botón de envío para guardar los datos. El atributo "data-bs-dismiss" se usa para
+cerrar la ventana modal cuando se hace clic en el botón "Cerrar". */
+
+
 <div id="modalmantenimiento" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
         <div class="modal-content">

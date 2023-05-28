@@ -1,3 +1,9 @@
+/* El código anterior es un script PHP que muestra una vista de un ticket de venta. Requiere algunos
+archivos, incluido un archivo de configuración y un archivo de modelo para la clase "Rol". Comprueba
+si el usuario está logueado y tiene acceso para visualizar el ticket de venta. Si el usuario tiene
+acceso, muestra la vista del ticket con detalles como la fecha, el método de pago, la información
+del cliente, los detalles del producto y el monto total. También incluye un botón de impresión para
+imprimir el billete. */
 <?php
     require_once("../../config/conexion.php");
     require_once("../../models/Rol.php");

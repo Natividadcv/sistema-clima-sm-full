@@ -1,3 +1,10 @@
+/* Este es un script PHP que maneja diferentes operaciones relacionadas con los empleados de una
+empresa. Incluye funciones para insertar, actualizar, eliminar y recuperar registros de empleados de
+una base de datos. También incluye una función para generar una lista de registros de empleados en
+formato JSON para usar con la biblioteca Datatable JS. El script usa una declaración de cambio para
+determinar qué operación realizar según el valor del parámetro "op" pasado en la URL. También
+incluye llamadas a clases y archivos externos para la conectividad de bases de datos y la
+inicialización de objetos. */
 <?php
     /* TODO: Llamando Clases */
     require_once("../config/conexion.php");

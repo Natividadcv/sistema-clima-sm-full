@@ -1,3 +1,8 @@
+/* Este es un código HTML para una ventana modal con el id "modalconsumo". Contiene un encabezado con
+el título "Consumo" y un botón de cierre, un cuerpo con una tabla que tiene columnas para "Tipo",
+"Doc.", "Fech.Crea." y "Cant", y un pie de página con un Botón "Cerrar". El modal está oculto de
+forma predeterminada (style="display: none;") y se puede activar para que se muestre usando
+JavaScript o jQuery. */
 <div id="modalconsumo" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
         <div class="modal-content">

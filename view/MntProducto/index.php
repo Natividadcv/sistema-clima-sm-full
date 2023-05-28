@@ -1,3 +1,8 @@
+/* Este es un código PHP que verifica si el usuario está logueado y tiene acceso al módulo
+"mntproducto". Si el usuario está logueado y tiene acceso, muestra una página HTML con una tabla de
+productos y algunos botones para agregar, editar o eliminar productos. También incluye algunos
+archivos JavaScript para manejar las interacciones con la tabla y los modales. Si el usuario no ha
+iniciado sesión o no tiene acceso, se redirige a una página de error 404. */
 <?php
     require_once("../../config/conexion.php");
     require_once("../../models/Rol.php");

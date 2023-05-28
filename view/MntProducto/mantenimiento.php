@@ -1,3 +1,8 @@
+/* El código anterior está creando una ventana modal con un formulario para agregar o editar
+información del producto. El formulario incluye campos para seleccionar una categoría de producto,
+ingresar un nombre de producto, descripción, capacidad, precio y stock, así como una opción para
+cargar una imagen. La ventana modal también incluye botones para cerrar la ventana y enviar el
+formulario. */
 <div id="modalmantenimiento" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
         <div class="modal-content">

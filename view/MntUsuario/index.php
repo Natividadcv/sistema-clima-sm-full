@@ -1,3 +1,9 @@
+/* Este es un código PHP que se utiliza para mostrar una página web para mantener registros de
+usuarios. Incluye código HTML, CSS y JavaScript para crear la interfaz de usuario y código PHP para
+interactuar con la base de datos y recuperar datos del usuario. El código verifica si el usuario ha
+iniciado sesión y tiene los permisos necesarios para acceder a la página y luego muestra una tabla
+con los registros de los usuarios. También incluye botones para agregar, editar y eliminar registros
+de usuarios. */
 <?php
     require_once("../../config/conexion.php");
     require_once("../../models/Rol.php");

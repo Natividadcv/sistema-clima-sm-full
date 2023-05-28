@@ -1,3 +1,9 @@
+/* Este es un código JavaScript que maneja un evento de clic en un botón con el ID "btnguardar". Cuando
+se hace clic en el botón, recupera los valores de dos campos de entrada con ID "txtpass" y
+"txtpassconfirm". Luego verifica si ambos campos no están vacíos y si los valores de los dos campos
+coinciden. Si pasa la validación, envía una solicitud POST a un script PHP con el ID de usuario y la
+nueva contraseña como parámetros. Si la validación falla, muestra un mensaje de error utilizando la
+biblioteca SweetAlert. */
 var usu_id = $('#USU_IDx').val();
 
 

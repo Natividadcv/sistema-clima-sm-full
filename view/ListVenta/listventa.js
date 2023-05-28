@@ -1,3 +1,10 @@
+/**
+  Esta es una función de JavaScript que utiliza DataTables para mostrar y manipular datos relacionados
+  con las ventas y sus detalles.
+  @param vent_id - Este parámetro se utiliza para identificar una venta específica en el sistema. Se
+  pasa como parámetro a las funciones "listardetalle" y "calculo" en el archivo controlador venta.php
+  para recuperar y mostrar los detalles de la venta y realizar cálculos sobre ella.
+ */
 var suc_id = $('#SUC_IDx').val();
 
 $(document).ready(function(){
@@ -100,6 +107,7 @@ function ver(vent_id){
     $.post("../../controller/venta.php?op=calculo",{vent_id:vent_id},function(data){
         data=JSON.parse(data);
         $('#txtsubtotal').html(data.VENT_SUBTOTAL);
+        $('txtdescuento').html(data.VENT_DESCUENTO);
         $('#txtigv').html(data.VENT_IGV);
         $('#txttotal').html(data.VENT_TOTAL);
     });
