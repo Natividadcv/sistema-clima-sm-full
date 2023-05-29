@@ -1,3 +1,5 @@
+/* La clase Sucursal en PHP proporciona funciones para recuperar, eliminar, insertar y actualizar
+información sobre sucursales o ubicaciones asociadas con una empresa. */
 <?php
 class Sucursal extends Conectar
 {

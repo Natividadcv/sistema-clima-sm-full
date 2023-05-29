@@ -1,3 +1,5 @@
+/* La clase Documento en PHP recupera un documento en función de su tipo mediante un procedimiento
+almacenado. */
 <?php
 class Documento extends Conectar
 {

@@ -1,3 +1,5 @@
+/* La clase "Producto" en PHP contiene funciones para recuperar, insertar, actualizar y eliminar
+información de productos de una base de datos, así como cargar y recuperar imágenes de productos. */
 <?php
     class Producto extends Conectar{
         /* TODO: Listar Registros */

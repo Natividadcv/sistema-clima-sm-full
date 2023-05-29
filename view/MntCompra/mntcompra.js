@@ -1,9 +1,9 @@
 /**
- * Esta es una función de JavaScript que maneja el registro y la gestión de compras, incluidas la
- * adición y eliminación de artículos, el cálculo de totales y el almacenamiento de la información de
- * compra.
- * @param detc_id - El ID del registro de detalles en la transacción de compra que debe eliminarse.
- * @param compr_id - El ID de la compra que se está realizando.
+  Esta es una función de JavaScript que maneja el registro y la gestión de compras, incluidas la
+  adición y eliminación de artículos, el cálculo de totales y el almacenamiento de la información de
+  compra.
+  @param detc_id - El ID del registro de detalles en la transacción de compra que debe eliminarse.
+  @param compr_id - El ID de la compra que se está realizando.
  */
 var emp_id = $("#EMP_IDx").val();
 var suc_id = $("#SUC_IDx").val();

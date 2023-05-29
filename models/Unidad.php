@@ -1,3 +1,5 @@
+/* La clase "Unidad" en PHP proporciona funciones para recuperar, insertar, actualizar y eliminar datos
+relacionados con unidades o departamentos asociados con una tienda o ubicación específica. */
 <?php
     class Unidad extends Conectar{
         /* TODO: Listar Registros */

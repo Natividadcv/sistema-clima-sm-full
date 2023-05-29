@@ -1,6 +1,6 @@
 /**
- * Esta es una función de JavaScript que maneja las operaciones CRUD para un sistema de administración
- * de clientes, incluido el envío de formularios, la lista de datos, la edición y la eliminación.
+  Esta es una función de JavaScript que maneja las operaciones CRUD para un sistema de administración
+  de clientes, incluido el envío de formularios, la lista de datos, la edición y la eliminación.
  */
 const telInput = document.getElementById("cli_telf");
 const nit = document.getElementById("cli_ruc");

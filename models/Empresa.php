@@ -1,3 +1,5 @@
+/* La clase Empresa en PHP contiene funciones para recuperar, eliminar, insertar y actualizar
+información sobre empresas en una base de datos utilizando procedimientos almacenados. */
 <?php
 class Empresa extends Conectar
 {

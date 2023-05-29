@@ -193,23 +193,6 @@ imprimir el billete. */
         
 
     </div>
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
     <?php require_once("../html/js.php"); ?>
     <script type="text/javascript" src="viewventa.js"></script>
 </body>

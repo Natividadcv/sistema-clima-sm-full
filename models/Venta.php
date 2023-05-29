@@ -1,3 +1,5 @@
+/* La clase Venta contiene métodos para insertar, actualizar y recuperar datos relacionados con las
+ventas en una base de datos. */
 <?php
 class Venta extends Conectar
 {

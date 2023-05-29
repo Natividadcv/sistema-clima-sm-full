@@ -1,3 +1,6 @@
+/* La clase Usuario en PHP contiene funciones para recuperar, insertar, actualizar y eliminar datos de
+usuario de una base de datos, así como para manejar el inicio de sesión del usuario y cargar
+imágenes de usuario. */
 <?php
 class Usuario extends Conectar
 {

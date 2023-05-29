@@ -1,3 +1,6 @@
+/* La clase Categoria en PHP contiene funciones para recuperar, eliminar, insertar y actualizar
+categorías en una base de datos, así como obtener el stock total para cada categoría en una
+ubicación de tienda específica. */
 <?php
 class Categoria extends Conectar
 {

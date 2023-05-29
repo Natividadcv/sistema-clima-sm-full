@@ -1,3 +1,5 @@
+/* La clase Proveedor en PHP contiene funciones para recuperar, borrar, insertar y actualizar
+información de proveedores en una base de datos utilizando procedimientos almacenados. */
 <?php
     class Proveedor extends Conectar{
         /* TODO: Listar Registros */

@@ -1,3 +1,5 @@
+/* La clase Moneda en PHP proporciona funciones para recuperar, insertar, actualizar y eliminar
+información de moneda de una base de datos. */
 <?php
     class Moneda extends Conectar{
         /* TODO: Listar Registros */

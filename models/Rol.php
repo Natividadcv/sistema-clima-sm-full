@@ -1,3 +1,5 @@
+/* La clase Rol en PHP contiene funciones para recuperar, eliminar, insertar y actualizar roles en una
+base de datos, así como validar el acceso a las opciones del menú según los roles de los usuarios. */
 <?php
     class Rol extends Conectar{
         /* TODO: Listar Registros */

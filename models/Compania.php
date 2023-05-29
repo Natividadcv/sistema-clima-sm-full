@@ -1,3 +1,5 @@
+/* La clase Compania en PHP contiene funciones para recuperar, eliminar, insertar y actualizar datos
+relacionados con una empresa en una base de datos utilizando procedimientos almacenados. */
 <?php
     class Compania extends Conectar{
         /* TODO: Listar Registros */

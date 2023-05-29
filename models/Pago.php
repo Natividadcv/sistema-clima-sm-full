@@ -1,3 +1,5 @@
+/* La clase "Pago" en PHP recupera información de pago de una base de datos utilizando un procedimiento
+almacenado. */
 <?php
     class Pago extends Conectar{
         /* TODO: Listar Registros */

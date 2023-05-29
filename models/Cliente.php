@@ -1,3 +1,5 @@
+/* La clase Cliente en PHP proporciona funciones para recuperar, insertar, actualizar y eliminar
+información de clientes de una base de datos utilizando procedimientos almacenados. */
 <?php
     class Cliente extends Conectar{
         /* TODO: Listar Registros */

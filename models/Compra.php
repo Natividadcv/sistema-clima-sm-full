@@ -1,3 +1,5 @@
+/* La clase "Compra" contiene métodos para administrar compras, incluida la inserción y recuperación de
+detalles de compra, el cálculo de totales y la obtención de datos para varios gráficos y paneles. */
 
 <?php
     class Compra extends Conectar{

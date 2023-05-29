@@ -1,6 +1,6 @@
 /**
- * Esta es una función de JavaScript que maneja el mantenimiento y la gestión de productos, incluida la
- * adición, edición y eliminación, así como la visualización de sus detalles y consumo.
+  Esta es una función de JavaScript que maneja el mantenimiento y la gestión de productos, incluida la
+  adición, edición y eliminación, así como la visualización de sus detalles y consumo.
  */
 
 var suc_id = $('#SUC_IDx').val();

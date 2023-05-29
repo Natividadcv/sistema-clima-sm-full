@@ -1,3 +1,5 @@
+/* La clase de menú en PHP proporciona funciones para recuperar, insertar y actualizar elementos de
+menú en una base de datos en función de una identificación de rol. */
 <?php
     class Menu extends Conectar{
         /* TODO: Listar Registros */

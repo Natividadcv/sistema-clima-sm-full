@@ -1,3 +1,5 @@
+/* La clase Calendario en PHP contiene funciones para recuperar una lista de estados y actualizar el
+estado de finalización de tareas en una base de datos utilizando procedimientos almacenados. */
 <?php
     class Calendario extends Conectar{
 
