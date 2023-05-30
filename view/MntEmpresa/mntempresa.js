@@ -101,7 +101,7 @@ function eliminar(emp_id){
         icon: "error",
         confirmButtonText : "Si",
         showCancelButton : true,
-        cancelButtonText: "No",
+    cancelButtonText: "No",
     }).then((result)=>{
         if (result.value){
             $.post("../../controller/empresa.php?op=eliminar",{emp_id:emp_id},function(data){
