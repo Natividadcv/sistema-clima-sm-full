@@ -114,11 +114,13 @@ $(document).on("click", "#btnagregar", function () {
   var prod_id = $("#prod_id").val();
   var prod_pventa = $("#prod_pventa").val();
   var detv_cant = $("#detv_cant").val();
+  var detv_descuento = $("#detv_descuento").val();
 
   if (
     $("#prod_id").val() == "" ||
     $("#prod_pventa").val() == "" ||
-    $("#detv_cant").val() == ""
+    $("#detv_cant").val() == "" ||
+    $("#detv_descuento").val() == ""
   ) {
     // Manejar el error de campos vacíos
     swal.fire({
@@ -146,6 +148,7 @@ $(document).on("click", "#btnagregar", function () {
           prod_id: prod_id,
           prod_pventa: prod_pventa,
           detv_cant: detv_cant,
+          detv_descuento: detv_descuento,
         },
         function (data) {
           console.log(data);
@@ -161,12 +164,14 @@ $(document).on("click", "#btnagregar", function () {
           $("#txtsubtotal").html(data.VENT_SUBTOTAL);
           $("#txtigv").html(data.VENT_IGV);
           $("#txttotal").html(data.VENT_TOTAL);
+          $("#txtdescuento").html(data.DETV_DESCUENTO);
         }
       );
 
       // Limpiar los campos después de agregar un detalle de venta
       $("#prod_pventa").val("");
       $("#detv_cant").val("");
+      $("#detv_descuento").val("");
 
       // Listar los detalles de venta actualizados
       listar(vent_id);
@@ -202,6 +207,7 @@ function eliminar(detv_id, vent_id) {
             $("#txtsubtotal").html(data.VENT_SUBTOTAL);
             $("#txtigv").html(data.VENT_IGV);
             $("#txttotal").html(data.VENT_TOTAL);
+            $("#txtdescuento").html(data.DETV_DESCUENTO);
           }
         );
 

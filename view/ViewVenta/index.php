@@ -89,6 +89,11 @@
                                                     <h5 class="fs-14 mb-0"><span id="txttotal"></span></h5>
                                                 </div>
 
+                                                <div class="col-lg-3 col-6">
+                                                    <p class="text-muted mb-2 text-uppercase fw-semibold">Total</p>
+                                                    <h5 class="fs-14 mb-0"><span id="txtdescuento"></span></h5>
+                                                </div>
+
                                             </div>
 
                                         </div>
@@ -144,6 +149,7 @@
                                                             <th scope="col" style="width: 50px;">Und</th>
                                                             <th scope="col">P.Venta</th>
                                                             <th scope="col">Cant.</th>
+                                                            <th scope="col">Desc.</th>
                                                             <th scope="col" class="text-end">Total</th>
                                                         </tr>
                                                     </thead>
@@ -161,10 +167,17 @@
                                                             <td>Sub Total</td>
                                                             <td class="text-end" id="vent_subtotal"></td>
                                                         </tr>
+                                                        
                                                         <tr>
                                                             <td>IVA (13%)</td>
                                                             <td class="text-end" id="vent_igv"></td>
                                                         </tr>
+
+                                                        <tr>
+                                                            <td>Descuento</td>
+                                                            <td class="text-end" id="descuento_igv"></td>
+                                                        </tr>
+
                                                         <tr class="border-top border-top-dashed fs-15">
                                                             <th scope="row">Total</th>
                                                             <th class="text-end" id="vent_total"></th>

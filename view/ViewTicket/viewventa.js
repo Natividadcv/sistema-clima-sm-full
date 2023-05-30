@@ -17,6 +17,7 @@ $(document).ready(function(){
 
         $('#vent_subtotal').html(data.VENT_SUBTOTAL);
         $('#vent_igv').html(data.VENT_IGV);
+        $('#descuento_igv').html(data.DETV_DESCUENTO);
         $('#vent_total').html(data.VENT_TOTAL);
 
         $('#vent_coment').html(data.VENT_COMENT);
