@@ -114,7 +114,7 @@ $(document).on("click", "#btnagregar", function () {
   var prod_id = $("#prod_id").val();
   var prod_pventa = $("#prod_pventa").val();
   var detv_cant = $("#detv_cant").val();
-  var detv_descuento = $("#detv_descuento").val();
+  var detv_descuento = parseFloat($("#detv_descuento").val());
 
   if (
     $("#prod_id").val() == "" ||
@@ -126,6 +126,13 @@ $(document).on("click", "#btnagregar", function () {
     swal.fire({
       title: "Venta",
       text: "Error Campos Vacios",
+      icon: "error",
+    });
+  } else if (detv_descuento > 100) {
+    // Manejar el error de descuento inválido
+    swal.fire({
+      title: "Venta",
+      text: "El descuento no puede ser mayor al 100%",
       icon: "error",
     });
   } else {
