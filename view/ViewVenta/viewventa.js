@@ -6,6 +6,7 @@ $(document).ready(function () {
     { vent_id: vent_id },
     function (data) {
       data = JSON.parse(data);
+      console.log(data);
       $("#txtdirecc").html(data.EMP_DIRECC);
       $("#txtruc").html(data.EMP_RUC);
       $("#txtemail").html(data.EMP_CORREO);
@@ -16,7 +17,7 @@ $(document).ready(function () {
       $("#fech_crea").html(data.FECH_CREA);
       $("#pag_nom").html(data.PAG_NOM);
       $("#txttotal").html(data.VENT_TOTAL);
-      $("#txtdescuento").html(data.DETV_DESCUENTO);
+      $("#descuento_igv").html(data.DETV_DESCUENTO);
 
       $("#vent_subtotal").html(data.VENT_SUBTOTAL);
       $("#vent_igv").html(data.VENT_IGV);

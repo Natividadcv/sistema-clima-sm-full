@@ -25,7 +25,7 @@ class Venta extends Conectar
         $query->bindValue(4, $detv_cant);
         $query->bindValue(5, $detv_descuento);
         $query->execute();
-        //return $query->fetchAll(PDO::FETCH_ASSOC);
+        return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function get_venta_detalle($vent_id)

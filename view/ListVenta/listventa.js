@@ -102,6 +102,7 @@ function ver(vent_id){
         $('#txtsubtotal').html(data.VENT_SUBTOTAL);
         $('#txtigv').html(data.VENT_IGV);
         $('#txttotal').html(data.VENT_TOTAL);
+        $('#txtdescuento').html(data.DETV_DESCUENTO);
     });
 
     $('#modaldetalle').modal('show');

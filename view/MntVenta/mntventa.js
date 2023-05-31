@@ -160,6 +160,7 @@ $(document).on("click", "#btnagregar", function () {
         "../../controller/venta.php?op=calculo",
         { vent_id: vent_id },
         function (data) {
+          console.log({ data });
           data = JSON.parse(data);
           $("#txtsubtotal").html(data.VENT_SUBTOTAL);
           $("#txtigv").html(data.VENT_IGV);

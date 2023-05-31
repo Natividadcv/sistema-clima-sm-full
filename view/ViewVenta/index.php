@@ -85,14 +85,16 @@
                                                 </div>
 
                                                 <div class="col-lg-3 col-6">
-                                                    <p class="text-muted mb-2 text-uppercase fw-semibold">Total</p>
-                                                    <h5 class="fs-14 mb-0"><span id="txttotal"></span></h5>
+                                                    <p class="text-muted mb-2 text-uppercase fw-semibold">Descuento</p>
+                                                    <h5 class="fs-14 mb-0"><span id="txtdescuento"></span></h5>
                                                 </div>
 
                                                 <div class="col-lg-3 col-6">
                                                     <p class="text-muted mb-2 text-uppercase fw-semibold">Total</p>
-                                                    <h5 class="fs-14 mb-0"><span id="txtdescuento"></span></h5>
+                                                    <h5 class="fs-14 mb-0"><span id="txttotal"></span></h5>
                                                 </div>
+
+                                        
 
                                             </div>
 

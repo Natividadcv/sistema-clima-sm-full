@@ -14,10 +14,10 @@ $(document).ready(function(){
         $('#fech_crea').html(fecha);
         $('#pag_nom').html(data.PAG_NOM);
         $('#txttotal').html(data.VENT_TOTAL);
+        $('#txtdescuento').html(data.DETV_DESCUENTO);
 
         $('#vent_subtotal').html(data.VENT_SUBTOTAL);
         $('#vent_igv').html(data.VENT_IGV);
-        $('#descuento_igv').html(data.DETV_DESCUENTO);
         $('#vent_total').html(data.VENT_TOTAL);
 
         $('#vent_coment').html(data.VENT_COMENT);
